@@ -1,0 +1,775 @@
+/** --------------------------------------------------
+    Variables
+-----------------------------------------------------*/
+
+#favorite-toggle a:before,
+#subscription-toggle a:before,
+.psf-reply-post-date:before {
+    color: inherit;
+    margin-right: 5px;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+
+/**
+ * PSForum specific CSS
+ */
+
+
+/**
+ * Clear fix
+ */
+
+.psf-header:before,
+.psf-header:after,
+div.psf-topic-content:before,
+div.psf-topic-content:after {
+    content: " ";
+    display: table;
+}
+
+.psf-header:after,
+div.psf-topic-content:after {
+    clear: both;
+}
+
+.psf-mobile-hidden {
+    display: none;
+}
+
+
+/* =PSForum Style
+	--- Structural
+-------------------------------------------------------------- */
+
+
+/**
+ * Top Margin on all PSForum pages
+ */
+
+#psforum-forums {
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.psf-forums-list {
+    margin: 0 0 0 5px;
+    padding-left: 15px;
+}
+
+.psf-forum-header,
+.psf-topic-header {
+    clear: both;
+}
+
+.psf-header {
+    padding: 0 10px;
+}
+
+.psf-header .psf-forum-freshness,
+.psf-header .psf-forum-topic-count,
+.psf-header .psf-forum-reply-count,
+.psf-header .psf-topic-voice-count,
+.psf-header .psf-topic-reply-count,
+.psf-header .psf-topic-freshness {
+    display: none;
+}
+
+.psf-forum-topic-count:after,
+.psf-topic-voice-count:after {
+    content: ',';
+}
+
+.psf-footer p {
+    margin: 0;
+    line-height: 1em;
+}
+
+.psf-body .hentry {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.psf-body ul.forum,
+.psf-body ul.topic {
+    overflow: hidden;
+    padding: 20px;
+}
+
+.psf-header-content {
+    float: right;
+}
+
+.psf-reply-item .hentry {
+    margin-bottom: 20px;
+}
+
+ul.psf-threaded-replies {
+    margin-left: 50px;
+}
+
+li.psf-forum-info,
+li.psf-topic-title {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+li.psf-forum-topic-count,
+li.psf-topic-voice-count,
+li.psf-forum-reply-count,
+li.psf-topic-reply-count {
+    float: left;
+    padding-right: 10px;
+}
+
+li.psf-forum-freshness,
+li.psf-topic-freshness {
+    clear: left;
+    padding-top: 10px;
+}
+
+li.psf-forum-freshness a,
+li.psf-topic-freshness a {
+    font-size: .85em;
+}
+
+.psf-forum-title h3,
+.psf-topic-title h3 {
+    margin: 8px 0;
+    padding: 0;
+}
+
+.psf-reply-title h3 {
+    font-size: 13px;
+}
+
+.psf-forum-author a.psf-author-name,
+.psf-topic-author a.psf-author-name,
+.psf-reply-author a.psf-author-name,
+.psf-search-author a.psf-author-name {
+    margin: 0 10px;
+    display: block;
+}
+
+
+/* =Topic and reply content
+-------------------------------------------------------------- */
+
+.psf-reply-item {
+    padding: 10px;
+}
+
+.psf-topic-content ul li,
+.psf-reply-content ul li {
+    list-style-type: disc;
+}
+
+.psf-topic-content ol li,
+.psf-reply-content ol li {
+    list-style-type: decimal;
+}
+
+.psf-topic-content ol li li,
+.psf-reply-content ol li li {
+    list-style-type: lower-alpha;
+}
+
+.psf-topic-content ol li li li,
+.psf-reply-content ol li li li {
+    list-style-type: upper-roman;
+}
+
+
+/* =Reply to
+-------------------------------------------------------------- */
+
+#psf-cancel-reply-to {
+    text-align: right;
+}
+
+.psf-forum-info .psf-forums-list {
+    margin-bottom: 10px;
+}
+
+.psf-forum-info .psf-forum-content,
+p.psf-topic-meta {
+    margin: 5px 0 5px;
+    padding: 0;
+}
+
+p.psf-topic-meta span {
+    white-space: nowrap;
+}
+
+
+/* =Avatars
+-------------------------------------------------------------- */
+
+p.psf-topic-meta img.avatar,
+ul.psf-reply-revision-log img.avatar,
+ul.psf-topic-revision-log img.avatar,
+div.psf-template-notice img.avatar,
+.widget_display_topics img.avatar,
+.widget_display_replies img.avatar {
+    padding: 0;
+}
+
+
+/**
+ * Fix visual inconsistency caused by PSForum on BuddyPress Profile/Groups
+ */
+
+.groups.forum #psforum-forums>h3 {
+    display: none;
+}
+
+.groups.group-forum-topic #psforum-forums>h3 {
+    display: block;
+}
+
+.bp-user #item-body #psforum-forums .entry-title {
+    display: none;
+}
+
+
+/* =Notices
+-------------------------------------------------------------- */
+
+.psf-template-notice {
+    clear: both;
+    padding: 5px 15px;
+}
+
+.psf-form .psf-template-notice {
+    margin-bottom: 10px;
+}
+
+div.psf-template-notice.info {
+    background-color: #ECEBA3;
+    color: #333;
+}
+
+div.psf-template-notice.important {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+div.psf-template-notice.warning {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+div.psf-template-notice p {
+    margin: 0 !important;
+}
+
+div.psf-template-notice.psf-forum-info {
+    background-color: #f2f2f2;
+    color: #888;
+}
+
+
+/* =Forms
+-------------------------------------------------------------- */
+
+.single-topic .psf-reply-form {
+    margin-top: 20px;
+}
+
+.psf-topic-form,
+.psf-reply-form,
+.psf-topic-tag-form {
+    clear: left;
+}
+
+.psf-topic-form legend {
+    display: inline;
+    width: auto;
+    border-bottom: none;
+}
+
+.psf-form {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    clear: left;
+    /**
+  * Fix for too-long forum names, usually from conversion
+  */
+}
+
+.psf-form legend {
+    padding: 5px;
+}
+
+.psf-form label {
+    font-weight: normal;
+}
+
+.psf-form input[type='text'],
+.psf-form textarea {
+    width: 100%;
+    display: block;
+}
+
+.psf-form p,
+.psf-form textarea,
+.psf-form select,
+.psf-form input[type='text'],
+.psf-form input[type='email'],
+.psf-form input[type='password'] {
+    margin: 0 0 10px;
+}
+
+.psf-form select#psf_forum_id,
+.psf-form select#psf_destination_topic {
+    max-width: 200px;
+}
+
+.psf-form input[type="checkbox"],
+.psf-form input[type="radio"] {
+    margin: 5px;
+}
+
+fieldset.psf-forum-form-attributes {
+    width: 200px;
+    float: right;
+    clear: none;
+    margin-left: 25px;
+}
+
+#psf-edit-topic-tag.psf-form fieldset.psf-form label,
+#psf-login fieldset label,
+#psf-register fieldset label,
+#psf-lost-pass fieldset label {
+    width: 100px;
+}
+
+textarea#psf_forum_content {
+    height: 210px;
+}
+
+#merge_tag,
+#delete_tag {
+    display: inline;
+}
+
+div.psf-submit-wrapper {
+    margin-top: 15px;
+    float: right;
+    clear: both;
+}
+
+p.form-allowed-tags {
+    max-width: 100%;
+}
+
+
+/* =PSForum TinyMCE in themes
+-------------------------------------------------------------- */
+
+div.psf-the-content-wrapper {
+    margin-bottom: 10px;
+}
+
+div.psf-the-content-wrapper textarea.psf-the-content {
+    width: 100%;
+    margin: 0;
+}
+
+div.psf-the-content-wrapper table,
+div.psf-the-content-wrapper tbody,
+div.psf-the-content-wrapper tr,
+div.psf-the-content-wrapper td {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    line-height: 1em;
+}
+
+div.psf-the-content-wrapper div.quicktags-toolbar {
+    padding: 5px;
+    min-height: 26px;
+}
+
+div.psf-the-content-wrapper td.mceToolbar {
+    padding: 4px 4px 8px;
+}
+
+#psforum-forums div.wp-editor-container {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+div.psf-the-content-wrapper td.mceStatusbar {
+    line-height: 16px;
+}
+
+
+/* =PSForum Edit User
+-------------------------------------------------------------- */
+
+.psf-user-edit-form fieldset {
+    padding: 20px 20px 0 20px;
+    margin-bottom: 20px;
+}
+
+.psf-user-edit-form fieldset div {
+    margin-bottom: 20px;
+    clear: left;
+}
+
+.psf-user-edit-form fieldset input,
+.psf-user-edit-form fieldset textarea {
+    margin-bottom: 0;
+}
+
+.psf-user-edit-form fieldset.psf-form input.checkbox {
+    width: auto;
+}
+
+.psf-user-edit-form fieldset legend {
+    display: none;
+}
+
+.psf-user-edit-form fieldset label[for] {
+    cursor: pointer;
+}
+
+.psf-form span.description {
+    margin: 5px;
+    clear: left;
+    padding: 5px;
+}
+
+fieldset.psf-form fieldset {
+    margin: 0;
+    border: none;
+    padding: 0;
+    clear: none;
+    float: none;
+}
+
+.psf-form fieldset.password input,
+.psf-form fieldset.password span {
+    width: 100%;
+}
+
+.psf-form fieldset.capabilities dl {
+    margin: 0;
+}
+
+.psf-form fieldset.password span.description {
+    margin-left: 0;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.psf-user-edit-form .entry-title {
+    font-size: .9em;
+}
+
+
+/* =User Pages
+-------------------------------------------------------------- */
+
+#psf-user-wrapper {
+    position: relative;
+    min-height: 330px;
+}
+
+#psf-user-avatar {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#psf-user-navigation a {
+    padding: 5px;
+    display: block;
+}
+
+#psf-user-body fieldset.psf-form {
+    clear: none;
+}
+
+#psf-user-body .psf-template-notice {
+    margin-bottom: 10px;
+}
+
+
+/* =Admin Links
+-------------------------------------------------------------- */
+
+span.psf-admin-links {
+    display: block;
+    font-size: .9em;
+}
+
+.psf-admin-links a {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.psf-meta .psf-reply-permalink {
+    float: right;
+}
+
+
+/* =Toggles
+-------------------------------------------------------------- */
+
+span#subscription-toggle,
+span#favorite-toggle {
+    float: right;
+}
+
+.psf-row-actions #favorite-toggle a {
+    text-decoration: none;
+    padding: 0 3px 1px;
+}
+
+.psf-row-actions #subscription-toggle a {
+    text-decoration: none;
+    padding: 0 3px 1px;
+}
+
+
+/* =Breadcrumb and Tags
+-------------------------------------------------------------- */
+
+div.psf-breadcrumb {
+    float: left;
+}
+
+div.psf-topic-tags {
+    margin-bottom: 10px;
+}
+
+#psf-topic-hot-tags {
+    clear: both;
+}
+
+
+/* =Search
+-------------------------------------------------------------- */
+
+#psf-search-form {
+    clear: left;
+}
+
+#psf-search-form .hidden {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    background: none;
+    left: -999em;
+}
+
+#favorite-toggle a:before {
+    content: "\f08a";
+}
+
+#favorite-toggle .is-favorite a:before {
+    content: "\f004";
+}
+
+#subscription-toggle {
+    margin-left: 10px;
+    float: right;
+}
+
+#subscription-toggle a:before {
+    content: "\f0a2";
+}
+
+#subscription-toggle .is-subscribed a:before {
+    content: "\f0f3";
+}
+
+.psf-reply-post-date:before {
+    content: '\f017';
+}
+
+
+/**
+ * PSForum Widgets
+ */
+
+.widget_display_views,
+.widget_display_forums,
+.widget_display_topics,
+.widget_display_replies,
+.widget_display_stats {
+    margin-bottom: 0 !important;
+}
+
+.widget_display_views>ul>li,
+.widget_display_forums>ul>li,
+.widget_display_topics>ul>li,
+.widget_display_replies>ul>li,
+.widget_display_stats>ul>li {
+    padding: 5px 0;
+}
+
+.widget_display_views>ul>li>a::before,
+.widget_display_forums>ul>li>a::before,
+.widget_display_topics>ul>li>a::before,
+.widget_display_replies>ul>li>a::before,
+.widget_display_stats>ul>li>a::before {
+    content: none;
+}
+
+.widget_display_stats dl {
+    margin-bottom: 0;
+}
+
+.widget_display_stats dd {
+    margin-bottom: 10px;
+}
+
+.widget_display_stats dt {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.psf-breadcrumb+.pagination {
+    display: none;
+}
+
+.psf-login-form fieldset legend {
+    display: none;
+}
+
+.psf-login-form .psf-username input,
+.psf-login-form .psf-email input,
+.psf-login-form .psf-password input {
+    padding: 5px;
+}
+
+.psf-login-form label {
+    display: block;
+}
+
+.psf-remember-me label {
+    display: inline-block;
+}
+
+.psf-login-form .psf-submit-wrapper {
+    float: none;
+}
+
+.psf-login-form .psf-login-links {
+    margin-top: 10px;
+}
+
+.psf-logged-in img.avatar {
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+.psf-logged-in h4 {
+    font-weight: bold;
+    font-size: 1.3em;
+    clear: none;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .psf-mobile-hidden {
+        display: inline-block;
+    }
+    li.psf-forum-info,
+    li.psf-topic-title {
+        margin-bottom: 0;
+    }
+    .psf-header .psf-forum-freshness,
+    .psf-header .psf-forum-topic-count,
+    .psf-header .psf-forum-reply-count,
+    .psf-header .psf-topic-voice-count,
+    .psf-header .psf-topic-reply-count,
+    .psf-header .psf-topic-freshness {
+        display: block;
+    }
+    .psf-forum-topic-count:after,
+    .psf-topic-voice-count:after {
+        content: '';
+    }
+    li.psf-forum-info,
+    li.psf-topic-title {
+        float: left;
+        width: 55%;
+    }
+    li.psf-forum-topic-count,
+    li.psf-topic-voice-count,
+    li.psf-forum-reply-count,
+    li.psf-topic-reply-count {
+        text-align: center;
+        width: 10%;
+    }
+    li.psf-forum-freshness,
+    li.psf-topic-freshness {
+        text-align: center;
+        width: 22%;
+        float: left;
+        clear: none;
+        padding-top: 0;
+    }
+    .psf-count-text {
+        display: none;
+    }
+    .psf-forum-author,
+    .psf-topic-author,
+    .psf-reply-author,
+    .psf-search-author {
+        float: left;
+        width: 115px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+    .psf-forum-content,
+    .psf-topic-content,
+    .psf-reply-content {
+        margin-left: 130px;
+    }
+    .psf-reply-post-date {
+        float: left;
+    }
+    .psf-admin-links {
+        float: right;
+    }
+    #psf-single-user-details {
+        position: absolute;
+        width: 150px;
+    }
+    #psforum-forums #psf-user-body {
+        padding-left: 180px;
+    }
+    .psf-user-edit-form .psf-form input,
+    .psf-user-edit-form .psf-form textarea {
+        width: 60%;
+    }
+    .psf-user-edit-form fieldset label[for] {
+        padding: 5px 20px 5px 0;
+        float: left;
+        width: 20%;
+        text-align: right;
+    }
+    .psf-user-edit-form fieldset dl label[for] {
+        text-align: left;
+        width: 60%;
+    }
+    .psf-user-edit-form fieldset fieldset.password {
+        width: 60%;
+        display: inline;
+    }
+    fieldset.submit button {
+        float: right;
+    }
+}

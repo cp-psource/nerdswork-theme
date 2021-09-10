@@ -1,0 +1,2026 @@
+/** --------------------------------------------------
+    Variables
+-----------------------------------------------------*/
+
+.group-admin-action-button a:before,
+.item-list-tabs li a:before,
+.notification-settings .icon:before,
+.panel-account-menu>ul>li>a:before,
+.thread-star .icon:before,
+.message-star-actions .icon:before,
+div.group-settings .radio li:before {
+    color: inherit;
+    margin-right: 5px;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+
+/**
+ * Wrapper for the top level BuddyPress Pages(directory etc)
+*/
+
+
+/**
+ * Header
+ */
+
+
+/**
+ * Notification count
+*/
+
+.count-pending-alert {
+    border-radius: 50%;
+    height: 21px;
+    line-height: 21px;
+    width: 21px;
+    position: absolute;
+    right: -5px;
+    text-align: center;
+    top: -10px;
+}
+
+.header-username {
+    padding-right: 5px;
+}
+
+
+/** Account/Notification Menu */
+
+.header-links {
+    float: right;
+    z-index: 5;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.header-links img.avatar {
+    padding: 0;
+}
+
+.header-links>li {
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+
+.header-links>li:last-child {
+    margin-right: 0;
+}
+
+.header-links>li>a .fa {
+    font-size: 24px;
+}
+
+.header-links .header-nav-dropdown-links {
+    padding: 10px 0;
+    width: 240px;
+}
+
+.header-links .header-nav-dropdown-links:before {
+    content: "";
+    height: 16px;
+    position: absolute;
+    transform: rotate(135deg);
+    transform-origin: 0 0;
+    right: 15px;
+    top: 0;
+    width: 16px;
+}
+
+.header-links .header-nav-dropdown-links li ul {
+    width: 240px;
+    padding: 10px 0;
+}
+
+.header-links .header-nav-dropdown-links li ul:before {
+    content: "";
+    height: 16px;
+    position: absolute;
+    transform: rotate(135deg);
+    transform-origin: 0 0;
+    right: 15px;
+    top: 0;
+    width: 16px;
+}
+
+.header-links>li>.header-nav-dropdown-links {
+    opacity: 0;
+    position: absolute;
+    right: -20px;
+    top: 40px;
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+    visibility: hidden;
+}
+
+.header-links>li:hover>div.header-nav-dropdown-links {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header-links .header-nav-dropdown-links li {
+    position: relative;
+}
+
+.header-links .nav-links-wrapper {
+    left: -240px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+    visibility: hidden;
+}
+
+.header-links li:hover>.nav-links-wrapper {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-links li li a {
+    display: block;
+    padding: 5px 20px;
+}
+
+.header-links .header-nav-dropdown-links ul ul:before {
+    height: 12px;
+    width: 12px;
+    top: 25px;
+    right: -12px;
+    transform: rotate(225deg);
+}
+
+
+/** Account Panel Menu*/
+
+.panel-account-menu {
+    clear: both;
+}
+
+.panel-account-menu .menupop {
+    position: relative;
+}
+
+.panel-account-menu .submenu-state-indicator {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    width: 25px;
+}
+
+.panel-account-menu a {
+    display: block;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.panel-account-menu a::before {
+    margin-right: 5px;
+}
+
+.panel-account-menu .nav-links-wrapper {
+    display: none;
+    padding: 5px;
+}
+
+.panel-account-menu .count {
+    border-radius: 50%;
+    font-size: 11px;
+    height: 18px;
+    left: 35px;
+    line-height: 18px;
+    width: 18px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+}
+
+.panel-account-menu .ab-submenu ul .count {
+    float: right;
+    left: auto;
+    position: relative;
+}
+
+.panel-account-menu .ab-submenu ul a:before {
+    content: '' !important;
+}
+
+
+/**
+ * BuddyPress Forms
+ */
+
+.standard-form input[type='text'],
+.standard-form input[type='email'],
+.standard-form input[type='password'],
+.standard-form input[type='url'],
+.standard-form textarea {
+    width: 100%;
+}
+
+.standard-form input[type='checkbox'],
+.standard-form input[type='radio'] {
+    margin: 0 0.5em;
+}
+
+.standard-form .editfield textarea {
+    height: 120px;
+}
+
+.standard-form label {
+    display: block;
+}
+
+.standard-form .field-visibility-settings-notoggle,
+.standard-form .field-visibility-settings-toggle {
+    margin-top: 5px;
+}
+
+
+/***
+ *
+ * BuddyPress Registration page
+ */
+
+.register-section {
+    margin-bottom: 20px;
+}
+
+.register-section p {
+    font-size: .9em;
+}
+
+.register-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#signup_form div.submit {
+    clear: both;
+}
+
+
+/**
+ * Blog Create form
+ * Hack for privacy text
+*/
+
+body.create-blog #setupform label {
+    display: block;
+}
+
+
+/***
+ * Message
+ */
+
+#send_message_form #subject,
+#send_message_form #message_content,
+#send_message_form .acfb-holder {
+    margin-bottom: 20px;
+}
+
+
+/***
+ * User settings Form
+ */
+
+#settings-form legend {
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.form-fields {
+    margin-bottom: 10px;
+}
+
+.form-fields:last-child {
+    margin-bottom: 0;
+}
+
+#bp-data-export {
+    margin-bottom: 20px;
+}
+
+.cb-exportable-data-items ul {
+    margin-bottom: 20px;
+}
+
+.cb-exportable-data-items ul li {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-bottom: 5px;
+}
+
+
+/**
+ * All search forms
+ */
+
+#search-members-form,
+#search-groups-form,
+#search-message-form,
+#search-blogs-form,
+#search-forums-form,
+#psf-search-form,
+.search-form {
+    position: relative;
+}
+
+#search-members-form label,
+#search-groups-form label,
+#search-message-form label,
+#search-blogs-form label,
+#search-forums-form label,
+#psf-search-form label,
+.search-form label {
+    margin: 0;
+}
+
+#search-members-form input[type="text"],
+#search-members-form input[type="search"],
+#search-groups-form input[type="text"],
+#search-groups-form input[type="search"],
+#search-message-form input[type="text"],
+#search-message-form input[type="search"],
+#search-blogs-form input[type="text"],
+#search-blogs-form input[type="search"],
+#search-forums-form input[type="text"],
+#search-forums-form input[type="search"],
+#psf-search-form input[type="text"],
+#psf-search-form input[type="search"],
+.search-form input[type="text"],
+.search-form input[type="search"] {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    outline: 0 none;
+    line-height: normal;
+}
+
+#search-members-form input[type="submit"],
+#search-groups-form input[type="submit"],
+#search-message-form input[type="submit"],
+#search-blogs-form input[type="submit"],
+#search-forums-form input[type="submit"],
+#psf-search-form input[type="submit"],
+.search-form input[type="submit"] {
+    padding: 8px 5px;
+    background: #fafafa;
+    border: 1px solid #d8d8d8;
+    color: #333;
+    border-radius: 0 5px 5px 0;
+    line-height: normal;
+    position: relative;
+    left: -2px;
+}
+
+
+/**
+ * Item List tabs
+ * Navigational Items
+ */
+
+.item-list-tabs {
+    clear: left;
+}
+
+.item-list-tabs#object-nav {
+    position: relative;
+}
+
+#subnav.item-list-tabs {
+    margin-bottom: 10px;
+}
+
+body.directory .item-list-tabs {
+    margin-bottom: 10px;
+}
+
+.item-list-tabs li {
+    display: inline-block;
+}
+
+.item-list-tabs>ul>li.last {
+    float: right;
+}
+
+.item-list-tabs li.last select {
+    max-width: 175px;
+}
+
+.item-list-tabs li a {
+    min-height: 20px;
+}
+
+.item-list-tabs li a,
+.item-list-tabs li a>span {
+    display: inline-block;
+    padding: 2px 5px;
+    text-decoration: none;
+}
+
+
+/**
+ * Stack nav for item-list-tabs
+ */
+
+li.sa-stacker ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 99;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    color: #222222;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+li.sa-stacker ul li {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    color: #222222;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    margin: 0;
+    padding: 10px 15px;
+    text-overflow: ellipsis;
+}
+
+.item-list-tabs li.sa-stacker {
+    position: relative;
+}
+
+.item-list-tabs li.sa-stacker>a {
+    display: block;
+    position: relative;
+}
+
+.item-list-tabs li.sa-stacker ul {
+    min-width: 175px;
+}
+
+.item-list-tabs li.sa-open>ul {
+    display: block;
+}
+
+.item-list-tabs li.sa-open>ul li {
+    float: none;
+    display: block;
+    margin: 5px 0 0 0;
+}
+
+.item-list-tabs li.sa-open>ul li a {
+    display: block;
+}
+
+.sa-open a span {
+    position: absolute;
+    right: 10px;
+}
+
+.sa-open .last>label {
+    display: block;
+    text-align: center;
+}
+
+.panel-account-menu>ul>li>a:before {
+    content: "\f192";
+    margin-right: 10px;
+}
+
+.item-list-tabs>li>a:before {
+    content: "\f0c1";
+}
+
+#li-nav-activity>a:before,
+#activity-personal-li>a:before {
+    content: "\f086";
+}
+
+#li-nav-xprofile>a:before,
+#xprofile-personal-li>a:before {
+    content: "\f007";
+}
+
+#li-nav-blogs>a:before,
+#blogs-personal-li>a:before {
+    content: "\f1ea";
+}
+
+#li-nav-notifications>a:before,
+#notifications-personal-li>a:before {
+    content: "\f0f3";
+}
+
+#subnav #notifications-personal-li>a:before {
+    content: "";
+}
+
+#li-nav-messages>a:before,
+#messages-personal-li>a:before {
+    content: "\f0e0";
+}
+
+#li-nav-friends a:before,
+#friends-personal-li a:before {
+    content: "\f0c0";
+}
+
+#li-nav-groups>a:before,
+#groups-personal-li>a:before {
+    content: "\f21a";
+}
+
+#li-nav-settings>a:before,
+#settings-personal-li>a:before {
+    content: "\f013";
+}
+
+a#wp-logout:before {
+    content: "\f011";
+}
+
+#notifications-my-notifications-personal-li>a:before {
+    content: "\f023";
+}
+
+#docs-personal-li>a:before,
+#li-nav-docs>a:before,
+#li-nav-bp_docs>a:before {
+    content: "\f15c";
+}
+
+#li-nav-media>a:before,
+#media-groups-li>a:before,
+#media-personal-li>a:before {
+    content: "\f030";
+}
+
+#li-nav-social-articles>a:before,
+#articles-personal-li>a:before {
+    content: "\f14b";
+}
+
+#mute-personal-li>a:before,
+#li-nav-mute>a:before {
+    content: "\f1f6";
+}
+
+#buddydrive-personal-li>a:before,
+#li-nav-buddydrive>a:before,
+#nav-buddydrive-groups-li>a:before {
+    content: "\f07c";
+}
+
+#members-komplimente-personal-li>a:before,
+#li-nav-members-komplimente>a:before {
+    content: "\f164";
+}
+
+#mycred-history-personal-li>a:before,
+#li-nav-mycred-history>a:before {
+    content: "\f091";
+}
+
+#read-personal-li>a:before {
+    content: "\f13e";
+}
+
+#home-groups-li>a:before {
+    content: "\f015";
+}
+
+#members-groups-li>a:before {
+    content: "\f0c0";
+}
+
+#invite-groups-li>a:before {
+    content: "\f234";
+}
+
+#admin-groups-li>a:before {
+    content: "\f013";
+}
+
+#nav-info-groups-li>a:before {
+    content: "\f05a";
+}
+
+#request-membership-groups-li>a:before {
+    content: "\f13e";
+}
+
+#nav-docs-groups-li>a:before {
+    content: "\f15c";
+}
+
+#nav-forum-groups-li>a:before,
+#li-nav-forums>a:before,
+#forums-personal-li>a:before {
+    content: "\f0e6";
+}
+
+#buddyblog-personal-li>a:before,
+#li-nav-buddyblog>a:before {
+    content: "\f0ca";
+}
+
+#members-following-personal-li>a:before,
+#li-nav-members-following>a:before {
+    content: "\f0c0";
+}
+
+#members-followers-personal-li>a:before,
+#li-nav-members-followers>a:before {
+    content: "\f0c0";
+}
+
+#mediapress-personal-li>a:before,
+#li-nav-mediapress>a:before {
+    content: "\f030";
+}
+
+#dashboard-link-id>a:before {
+    content: "\f0e4";
+}
+
+li.feed>a:before {
+    content: "\f09e";
+}
+
+
+/**
+ * Item List
+ */
+
+
+/**
+ * If you see .row think of theme controlled lists like directory, friends but does not apply on widget output
+ */
+
+.row.item-list>li {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.item-list .item-entry {
+    height: 100%;
+}
+
+
+/**Item in the list*/
+
+.item-entry-header {
+    min-height: 150px;
+    padding: 0 10px;
+    position: relative;
+}
+
+.item-entry-header .item-avatar {
+    bottom: -40px;
+    left: 10px;
+    position: absolute;
+}
+
+.item-entry-header .item-meta-count {
+    border: 2px solid #333;
+    border-radius: 10px;
+    bottom: 30px;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 18px;
+    padding: 0 6px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.item {
+    word-wrap: break-word;
+}
+
+.row .item {
+    padding: 45px 10px 10px;
+    clear: both;
+}
+
+span.update {
+    border-radius: 5px;
+    display: block;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.item-list .action {
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+}
+
+.item-list .item-desc {
+    margin-top: 10px;
+}
+
+.item-desc p {
+    margin: 0;
+}
+
+
+/*--------------------------------------------------------------
+Directories - Members, Groups, Blogs, Forums, Messages(user messages)
+--------------------------------------------------------------*/
+
+.dir-search {
+    display: table;
+    margin: 0 0 20px;
+    position: relative;
+}
+
+div.message-search {
+    display: table;
+}
+
+.dir-search form,
+#search-message-form {
+    display: table-row;
+}
+
+.dir-search label,
+.dir-search input[type='submit'],
+#messages_search,
+#messages_search_submit {
+    display: table-cell;
+}
+
+
+/*-------------------------------------------------------------------------
+Headers, Lists and Tabs - Activity, Groups, Blogs, Forums, Profiles
+-------------------------------------------------------------------------*/
+
+#item-header {
+    height: auto;
+}
+
+#item-header-content {
+    width: 100%;
+    max-height: 100%;
+    text-align: center;
+}
+
+#item-header-avatar {
+    position: static;
+    margin-top: 20px;
+}
+
+#item-header-avatar .avatar {
+    margin: 0 auto;
+    display: block;
+    max-width: 90px;
+}
+
+div#item-header div#item-actions {
+    float: right;
+    width: 20%;
+    margin: 0 0 15px 15px;
+    text-align: right;
+}
+
+#item-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+div#item-header ul {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+div#item-header ul h5,
+div#item-header ul span,
+div#item-header ul hr {
+    display: none;
+}
+
+div#item-header ul li {
+    float: right;
+    list-style-type: none;
+}
+
+div#item-header ul img.avatar,
+div#item-header ul.avatars img.avatar {
+    height: 30px;
+    width: 30px;
+    margin: 2px;
+}
+
+#item-buttons {
+    display: inline-block;
+}
+
+.item-body {
+    margin: 20px 0;
+}
+
+.bp-avatar #avatar-crop-actions a {
+    display: inline-block;
+}
+
+
+/*--------------------------------------------------------------
+ Extended Profiles
+--------------------------------------------------------------*/
+
+
+/**
+ * Profile View details
+ */
+
+.profile .bp-widget {
+    margin-bottom: 20px;
+}
+
+.profile-fields .row {
+    margin-bottom: 10px;
+}
+
+.profile-fields .data p {
+    margin: 0;
+}
+
+
+/***
+ * Edit Profile
+ */
+
+ul.button-nav {
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+ul.button-nav li {
+    display: inline-block;
+    margin: 5px;
+}
+
+ul.button-nav li:first-child {
+    margin-left: 0;
+}
+
+ul.button-nav li a {
+    position: relative;
+    padding: 5px 5px 0;
+}
+
+ul.button-nav li.current a {
+    font-weight: bold;
+}
+
+
+/**
+ * Stack nav for buttons nav in profile edit
+ */
+
+ul.button-nav li.sa-stacker {
+    position: relative;
+}
+
+ul.button-nav li.sa-stacker>a {
+    display: block;
+    position: relative;
+}
+
+ul.button-nav li.sa-stacker ul {
+    min-width: 175px;
+}
+
+ul.button-nav li.sa-open ul {
+    display: block;
+}
+
+ul.button-nav li.sa-open ul li {
+    float: none;
+    display: block;
+    text-align: center;
+}
+
+.profile-edit h4,
+.bp-widget h4 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.editfield {
+    margin-bottom: 15px;
+}
+
+.editfield .description:empty {
+    display: none;
+}
+
+body.no-js .field-visibility-settings-toggle,
+body.no-js .field-visibility-settings-close {
+    display: none;
+}
+
+.field-visibility-settings-close {
+    padding-left: 20px;
+}
+
+.field-visibility-settings {
+    display: none;
+    margin-top: 5px;
+}
+
+body.no-js .field-visibility-settings {
+    display: block;
+}
+
+.current-visibility-level {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.field-visibility-settings,
+.field-visibility-settings-toggle,
+.field-visibility-settings-notoggle {
+    margin-bottom: 0;
+}
+
+.field-visibility-settings ul li {
+    list-style-type: none;
+}
+
+.field-visibility-settings-toggle a,
+.field-visibility-settings a {
+    font-size: .9em;
+}
+
+.current-visibility-level {
+    cursor: pointer;
+}
+
+body.register div.page ul {
+    list-style: none;
+}
+
+.standard-form .field-visibility-settings label {
+    margin: .5em 0;
+    font-weight: normal;
+}
+
+.field-visibility-settings legend,
+.field-visibility-settings-toggle {
+    font-style: italic;
+}
+
+
+/*-------------------------------------------------------------------------
+ User Messages
+-------------------------------------------------------------------------*/
+
+
+/**
+ * Message search & paginations
+ */
+
+.message-list-search-pagination .message-search {
+    float: left;
+}
+
+.message-list-search-pagination .pagination {
+    float: right;
+}
+
+.message-list-search-pagination .pag-count {
+    line-height: 30px;
+}
+
+
+/**
+ * Message List view
+ */
+
+.message-list li {
+    padding: 5px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.message-list li#message-toolbar {
+    margin-bottom: 0;
+}
+
+.bulk-select-all {
+    float: right;
+    margin-right: 5px;
+}
+
+.bulk-select-check input[type='checkbox'] {
+    margin-bottom: 0;
+}
+
+.message-action-star .icon:before {
+    content: "\f006";
+}
+
+.message-action-unstar .icon:before {
+    content: "\f005";
+}
+
+.thread-from {
+    width: 65px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+
+.thread-info {
+    width: 100%;
+    padding-left: 65px;
+    padding-right: 65px;
+}
+
+.message-thread-meta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65px;
+}
+
+
+/***
+ * Single Message Thread
+ */
+
+#message-recipients {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.message-delete-button {
+    display: block;
+    float: right;
+}
+
+.message-box {
+    padding: 15px 5px;
+}
+
+
+/*
+ * Message metadata
+ */
+
+.message-metadata .avatar {
+    float: left;
+    width: 50px;
+}
+
+.message-metadata strong {
+    padding-left: 10px;
+}
+
+.message-metadata span.activity {
+    float: right;
+}
+
+.message-metadata .message-star-actions {
+    float: right;
+}
+
+
+/**
+ * Message Content
+ */
+
+.message-box .message-content {
+    padding-left: 60px;
+}
+
+.message-box .message-content p {
+    margin-bottom: 10px;
+}
+
+table.notifications .bulk-select-all {
+    float: none;
+}
+
+table.notification-settings,
+table.profile-settings {
+    margin-bottom: 50px;
+}
+
+table.notification-settings .icon {
+    width: 10%;
+}
+
+table.notification-settings .title {
+    width: 70%;
+}
+
+table.notification-settings .yes,
+table.notification-settings .no {
+    width: 10%;
+}
+
+#activity-notification-settings .icon:before {
+    content: "\f085";
+}
+
+#friends-notification-settings .icon:before {
+    content: "\f007";
+}
+
+#messages-notification-settings .icon:before {
+    content: "\f0e0";
+}
+
+#groups-notification-settings .icon:before {
+    content: "\f0c0";
+}
+
+table.profile-settings th.title,
+table.profile-settings td.field-visibility {
+    width: 45%;
+}
+
+table.profile-settings th.field-group-name,
+table.profile-settings td.field-name {
+    width: 55%;
+}
+
+
+/*--------------------------------------------------------------
+ BuddyPress Activity Structural CSS
+--------------------------------------------------------------*/
+
+form#whats-new-form {
+    margin: 10px 0;
+}
+
+#whats-new-form textarea {
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+}
+
+#whats-new-avatar {
+    float: left;
+}
+
+#whats-new-content {
+    margin-left: 75px;
+}
+
+#whats-new-options select {
+    max-width: 200px;
+}
+
+#whats-new-submit {
+    float: right;
+}
+
+#whats-new-options {
+    margin-top: 10px;
+}
+
+body.no-js #whats-new-options {
+    height: auto;
+}
+
+
+/*--------------------------------------------------------------
+ - Activity Listing
+--------------------------------------------------------------*/
+
+ul.activity-list {
+    max-width: 100%;
+}
+
+.activity-list li.activity-item {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.activity-list li.mini {
+    min-height: 35px;
+}
+
+.activity-list .activity-avatar {
+    display: none;
+}
+
+.activity-list .activity-content {
+    position: relative;
+}
+
+.activity-header img.avatar {
+    float: none !important;
+    padding: 0;
+    margin-right: 5px;
+}
+
+li.mini .activity-content p {
+    margin: 0;
+}
+
+.activity-content .activity-inner,
+.activity-content blockquote {
+    margin: 10px 0;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.activity-inner>p {
+    word-wrap: break-word;
+}
+
+.activity-inner>.activity-inner {
+    margin: 0 !important;
+}
+
+.activity-inner>blockquote {
+    margin: 0 !important;
+}
+
+.new_blog_post .activity-inner p img {
+    display: block;
+    margin: 0 auto;
+}
+
+.activity-list li.load-more {
+    text-align: center;
+    border-bottom: 0 none;
+}
+
+
+/*--------------------------------------------------------------
+6.1.2 - Activity Comments
+--------------------------------------------------------------*/
+
+li.mini .activity-comments {
+    clear: both;
+}
+
+div.activity-comments ul li {
+    padding: 10px 0 0;
+}
+
+div.activity-comments ul li:before,
+div.activity-comments ul li:after {
+    content: " ";
+    display: table;
+}
+
+div.activity-comments ul li:after {
+    clear: both;
+}
+
+div.activity-meta {
+    margin-top: 10px;
+}
+
+div.activity-comments {
+    margin: 0;
+    overflow: hidden;
+    /* IE fix */
+    position: relative;
+    width: auto;
+    clear: both;
+}
+
+div.activity-comments>ul {
+    padding: 0 0 0 10px;
+}
+
+div.activity-comments ul {
+    clear: both;
+}
+
+div.activity-comments>ul>li:first-child {
+    border-top: none;
+}
+
+div.activity-comments ul li>ul {
+    padding-left: 10px;
+}
+
+div.activity-comments div.acomment-avatar img {
+    margin-right: 10px;
+    float: left;
+}
+
+div.activity-comments div.acomment-content {
+    margin: 5px 0 0 60px;
+}
+
+div.activity-comments form.ac-form {
+    display: none;
+    padding: 10px;
+    clear: both;
+}
+
+div.activity-comments div#message {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+div.activity-comments form textarea {
+    height: 60px;
+    width: 100%;
+}
+
+div.activity-comments form div.ac-reply-avatar {
+    float: left;
+}
+
+div.activity-comments form div.ac-reply-content {
+    margin-left: 50px;
+    padding-left: 15px;
+}
+
+.acomment-options {
+    margin: 5px 0 5px 60px;
+}
+
+.acomment-options a:hover {
+    color: inherit;
+}
+
+body.activity-permalink #container {
+    min-height: 300px;
+}
+
+body.activity-permalink .activity-list .activity-avatar {
+    max-width: 64px;
+}
+
+body.activity-permalink .activity-list .activity-content {
+    min-height: 35px;
+}
+
+body.activity-permalink .activity-list div.activity-comments {
+    width: auto;
+}
+
+.item-entry-header .bp-group-status {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.group-setup-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.group-setup-form p.description {
+    margin: 10px 0;
+}
+
+.group-setup-form textarea {
+    min-height: 150px;
+}
+
+div.group-settings fieldset {
+    margin-bottom: 10px;
+}
+
+div.group-settings input[type="checkbox"],
+div.group-settings input[type="radio"] {
+    margin: 0 5px;
+}
+
+div.group-settings p {
+    margin: 5px 0;
+}
+
+div.group-settings ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+div.group-settings ul:last-child {
+    margin-bottom: 0;
+}
+
+div.group-settings .radio li:before {
+    content: "\f105";
+}
+
+div.group-settings ul li {
+    margin-bottom: 5px;
+}
+
+#group-create-body .bp-avatar-nav {
+    margin-top: 50px;
+}
+
+#group-create-tabs li {
+    padding-right: 10px;
+}
+
+
+/****
+*
+* Single Group Page
+*/
+
+#send-invite-form .submit {
+    clear: left;
+    text-align: right;
+}
+
+.group-types-list {
+    margin-top: 20px;
+}
+
+.group-admin-mods-list {
+    margin: 20px 0;
+}
+
+.group-admin-mods-list li {
+    display: inline-block;
+}
+
+.group-admin-mods-list #group-admins {
+    margin-bottom: 20px;
+}
+
+.group-info-details .group-description {
+    font-size: 14px;
+}
+
+.widget_bp_groups_widget .widgettitle,
+.widget_bp_core_members_widget .widgettitle {
+    display: inline-block;
+    margin: 0;
+    background: transparent;
+}
+
+
+/**
+ * These widgets don't need floated title
+ */
+
+.widget .item-options a {
+    padding: 3px 0;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.widget ul.item-list {
+    padding: 0 0;
+    clear: left;
+}
+
+.widget ul.item-list li {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.8);
+    clear: left;
+}
+
+.widget ul.featured-members-slider li {
+    clear: none;
+}
+
+.widget_bp_groups_widget ul.item-list li {
+    min-height: 50px;
+}
+
+.widget ul.item-list li:last-child {
+    border-bottom: none !important;
+}
+
+.widget ul.item-list .item-avatar {
+    float: left;
+    width: 60px;
+}
+
+.widget ul.item-list .item {
+    margin-left: 70px;
+}
+
+.widget #members-list,
+.widget #groups-list,
+.widget .avatar-block {
+    width: 100%;
+}
+
+.widget .avatar-block .item-avatar {
+    margin: 2%;
+    display: inline-block;
+}
+
+.widget #groups-list .item-title a {
+    display: inline-block;
+}
+
+.widget .widget-error {
+    padding: 0;
+    clear: both;
+}
+
+
+/**
+ * Login widget
+ */
+
+.widget_bp_core_login_widget .bp-login-widget-user-avatar {
+    width: 55px;
+    float: left;
+    margin-right: 10px;
+}
+
+.widget_bp_core_login_widget .bp-login-widget-user-avatar a {
+    display: inline-block;
+}
+
+.widget_bp_core_login_widget .bp-login-widget-user-links {
+    float: left;
+}
+
+.widget_bp_core_login_widget .bp-login-widget-user-link {
+    font-size: 1.1em;
+}
+
+.widget_bp_core_login_widget .standard-form label+input {
+    margin-bottom: 0;
+}
+
+
+/***
+ * BuddyPress Button css
+ */
+
+.generic-button i {
+    padding-right: 5px;
+}
+
+
+/**
+ * Friend request screen
+ */
+
+a.fav:before,
+a.accept:before,
+a.reject:before,
+a.bp-primary-action:before,
+a.bp-secondary-action:before,
+a.psmt-bp-primary-action:before,
+a.psmt-bp-secondary-action:before,
+.generic-button a:before {
+    color: inherit;
+    margin-right: 5px;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+.generic-button .join-group:before {
+    content: "\f234";
+}
+
+.generic-button .leave-group:before {
+    content: "\f056";
+}
+
+.generic-button .request-membership:before {
+    content: "\f234";
+}
+
+.generic-button .send-message:before {
+    content: "\f003";
+}
+
+.generic-button .activity-button:before {
+    content: "\f1fa";
+}
+
+.friendship-button .add:before {
+    content: "\f234";
+}
+
+.friendship-button .remove:before {
+    content: "\f235";
+}
+
+.friendship-button .pending_friend:before {
+    content: "\f056";
+}
+
+.friendship-button .awaiting_response_friend:before {
+    content: "\f252";
+}
+
+
+/**
+ * Friendship
+ */
+
+a.accept:before {
+    content: "\f05d";
+}
+
+a.reject:before {
+    content: "\f05c";
+}
+
+
+/**
+ * Activity
+ */
+
+a.acomment-reply:before,
+a.psmt-acomment-reply:before {
+    content: "\f27b";
+}
+
+a.fav:before {
+    content: "\f08a";
+}
+
+a.unfav:before {
+    content: "\f004";
+}
+
+a.delete-activity:before,
+a.acomment-delete:before,
+a.psmt-acomment-delete:before {
+    content: "\f014";
+}
+
+
+/**
+ * Follow plugin
+ */
+
+div.follow-button .follow:before {
+    content: "\f234";
+}
+
+div.follow-button .unfollow:before {
+    content: "\f235";
+}
+
+
+/**
+ * Action buttons general
+ */
+
+
+/**
+ * Mute Plugin
+ */
+
+a.unmuted:before {
+    content: "\f1f6";
+}
+
+a.muted:before {
+    content: "\f0f3";
+}
+
+
+/**
+ * komplimente plugin
+*/
+
+a.komplimente-popup:before {
+    content: "\f164";
+}
+
+
+/*** Group Icons*/
+
+a.admin-demote-to-member:before {
+    content: "\f0c4";
+}
+
+a.mod-promote-to-admin:before {
+    content: "\f135";
+}
+
+a.mod-demote-to-member:before {
+    content: "\f0c4";
+}
+
+a.member-promote-to-mod:before {
+    content: "\f0a1";
+}
+
+a.member-promote-to-admin:before {
+    content: "\f135";
+}
+
+a.member-remove-from-group:before {
+    content: "\f05c";
+}
+
+a.member-ban:before {
+    content: "\f05e";
+}
+
+a.member-unban:before {
+    content: "\f0e2";
+}
+
+
+/* Note: Our Button Group Module is borrowed from Twitter Bootstrap*/
+
+
+/*---------------------------------------- Button Group Dropdown Module --------------------------------*/
+
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.dropup,
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle:focus {
+    outline: 0;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+}
+
+.dropdown-menu.pull-right {
+    right: 0;
+    left: auto;
+}
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+}
+
+.open>.dropdown-menu {
+    display: block;
+}
+
+.open>a {
+    outline: 0;
+}
+
+.dropdown-menu-right {
+    left: auto;
+    right: 0;
+}
+
+.dropdown-menu-left {
+    left: 0;
+    right: auto;
+}
+
+.dropdown-header {
+    display: block;
+    padding: 3px 20px;
+}
+
+.dropdown-backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 990;
+}
+
+.pull-right>.dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+
+/*
+ * Allow for dropdowns to go bottom up (aka, dropup-menu)
+ */
+
+.dropup .caret {
+    border-top: 0;
+    border-bottom: 4px dashed;
+    border-bottom: 4px solid \9;
+    content: "";
+}
+
+.dropup .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 15px;
+}
+
+#item-buttons .dropup .dropdown-menu:before {
+    left: 75px;
+    right: auto;
+}
+
+.dropdown-menu a {
+    display: block;
+    width: 100%;
+}
+
+table.notifications .bulk-select-all {
+    width: 10%;
+}
+
+table.notifications .title {
+    width: 70%;
+}
+
+table.notifications .actions {
+    width: 20%;
+}
+
+table.notifications .notification-since {
+    padding-left: 10px;
+}
+
+.notifications-options-nav .SumoSelect {
+    display: inline-block;
+}
+
+#notification-bulk-manage {
+    display: inline-block;
+}
+
+@media screen and (min-width: 420px) {
+    .directory .page-header .page-header-title {
+        font-size: 44px;
+    }
+    #activity-stream {
+        margin-left: 75px;
+    }
+    .activity-list .activity-avatar {
+        display: block;
+        float: left;
+        left: -75px;
+        position: absolute;
+        top: 20px;
+    }
+}
+
+
+/**
+ * Mid resolution phones
+ */
+
+@media screen and (min-width: 568px) {
+    #search-members-form input[type="text"],
+    #search-groups-form input[type="text"],
+    #search-message-form input[type="text"],
+    #search-blogs-form input[type="text"],
+    #search-forums-form input[type="text"],
+    #psf-search-form input[type="text"] {
+        max-width: 220px;
+        padding: 8px 45px 8px 8px;
+    }
+    #search-members-form input[type="submit"],
+    #search-groups-form input[type="submit"],
+    #search-message-form input[type="submit"],
+    #search-blogs-form input[type="submit"],
+    #search-forums-form input[type="submit"],
+    #psf-search-form input[type="submit"] {
+        padding: 8px 10px;
+    }
+    #item-header {
+        height: 250px;
+    }
+    #item-header-avatar {
+        position: absolute;
+        bottom: -22px;
+        z-index: 1;
+    }
+    #item-header-avatar .avatar {
+        max-width: 100%;
+    }
+    #item-header-content {
+        bottom: 0;
+        padding-left: 185px;
+        position: absolute;
+        text-align: left;
+    }
+    #object-nav.item-list-tabs {
+        margin-left: 185px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .activity-inner .bpfb_final_link .bpfb_link_preview_container {
+        float: left;
+        margin: 0 10px 0;
+    }
+}
+
+
+/**
+ * Desktop/High res screens( > 992px )
+ */
+
+@media screen and (min-width: 992px) {
+    /** Group invite */
+    #content .left-menu {
+        float: left;
+        width: 170px;
+        max-height: 600px;
+        overflow: auto;
+    }
+    #content .main-column {
+        padding-left: 190px;
+        min-width: 340px;
+        width: 100%;
+    }
+    .register-section {
+        width: 48%;
+    }
+    #basic-details-section {
+        float: left;
+        margin-right: 1%;
+    }
+    #profile-details-section {
+        float: right;
+        margin-left: 1%;
+    }
+    #blog-details-section {
+        clear: left;
+        float: left;
+        margin-right: 1%;
+    }
+    body.activity-permalink .activity-list .activity-avatar {
+        left: -185px;
+        top: 0;
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #register_form #security-section {
+        padding: 2% 0;
+        margin: 0 0 0 -20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div.activity-comments form.ac-form {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    div.activity-comments form div.ac-reply-avatar {
+        display: none;
+    }
+    div.activity-comments div.acomment-content,
+    .acomment-options {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    div.activity-comments form div.ac-reply-content {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}

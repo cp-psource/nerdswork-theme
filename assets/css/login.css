@@ -1,0 +1,260 @@
+/** --------------------------------------------------
+    Variables
+-----------------------------------------------------*/
+/*--------------------------------------------------------------
+ //=== Buttons Structure module
+--------------------------------------------------------------*/
+.button, input[type="submit"],
+input[type="button"],
+input[type="reset"],
+.btn,
+.bp-login-widget-register-link a,
+form button,
+.btn-secondary,
+.activity-item .activity-meta a,
+a.comment-reply-link,
+.sow-more-text a, .generic-button a,
+#bppg-del-image, #wp-submit.button-primary {
+  /* Structure */
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  zoom: 1;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.button::-moz-focus-inner, input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+.btn::-moz-focus-inner,
+.bp-login-widget-register-link a::-moz-focus-inner,
+form button::-moz-focus-inner,
+.btn-secondary::-moz-focus-inner,
+.activity-item .activity-meta a::-moz-focus-inner,
+a.comment-reply-link::-moz-focus-inner,
+.sow-more-text a::-moz-focus-inner, .generic-button a::-moz-focus-inner,
+#bppg-del-image::-moz-focus-inner, #wp-submit.button-primary::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.button:focus, input[type="submit"]:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+.btn:focus,
+.bp-login-widget-register-link a:focus,
+form button:focus,
+.btn-secondary:focus,
+.activity-item .activity-meta a:focus,
+a.comment-reply-link:focus,
+.sow-more-text a:focus, .generic-button a:focus,
+#bppg-del-image:focus, #wp-submit.button-primary:focus {
+  outline: 0;
+}
+
+.button[disabled], input[disabled][type="submit"],
+input[disabled][type="button"],
+input[disabled][type="reset"],
+[disabled].btn,
+.bp-login-widget-register-link a[disabled],
+form button[disabled],
+[disabled].btn-secondary,
+.activity-item .activity-meta a[disabled],
+a[disabled].comment-reply-link,
+.sow-more-text a[disabled], .generic-button a[disabled],
+[disabled]#bppg-del-image, [disabled]#wp-submit.button-primary,
+.button[disabled]:hover,
+input[disabled][type="submit"]:hover,
+input[disabled][type="button"]:hover,
+input[disabled][type="reset"]:hover,
+[disabled].btn:hover,
+.bp-login-widget-register-link a[disabled]:hover,
+form button[disabled]:hover,
+[disabled].btn-secondary:hover,
+.activity-item .activity-meta a[disabled]:hover,
+a[disabled].comment-reply-link:hover,
+.sow-more-text a[disabled]:hover,
+.generic-button a[disabled]:hover,
+[disabled]#bppg-del-image:hover,
+[disabled]#wp-submit.button-primary:hover,
+.button[disabled]:focus,
+input[disabled][type="submit"]:focus,
+input[disabled][type="button"]:focus,
+input[disabled][type="reset"]:focus,
+[disabled].btn:focus,
+.bp-login-widget-register-link a[disabled]:focus,
+form button[disabled]:focus,
+[disabled].btn-secondary:focus,
+.activity-item .activity-meta a[disabled]:focus,
+a[disabled].comment-reply-link:focus,
+.sow-more-text a[disabled]:focus,
+.generic-button a[disabled]:focus,
+[disabled]#bppg-del-image:focus,
+[disabled]#wp-submit.button-primary:focus,
+.button[disabled]:active,
+input[disabled][type="submit"]:active,
+input[disabled][type="button"]:active,
+input[disabled][type="reset"]:active,
+[disabled].btn:active,
+.bp-login-widget-register-link a[disabled]:active,
+form button[disabled]:active,
+[disabled].btn-secondary:active,
+.activity-item .activity-meta a[disabled]:active,
+a[disabled].comment-reply-link:active,
+.sow-more-text a[disabled]:active,
+.generic-button a[disabled]:active,
+[disabled]#bppg-del-image:active,
+[disabled]#wp-submit.button-primary:active {
+  background-image: none;
+  box-shadow: none;
+  cursor: not-allowed;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: alpha(opacity=40);
+  -khtml-opacity: 0.40;
+  -moz-opacity: 0.40;
+  opacity: 0.40;
+}
+
+.button-hidden {
+  display: none;
+}
+
+.loading i {
+  -webkit-animation: do-spin 2s infinite linear;
+  animation: do-spin 2s infinite linear;
+}
+
+body.login {
+  padding: 0.01px;
+  position: relative;
+}
+
+#login-page-mask {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#login {
+  left: 50%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body.interim-login #login {
+  transform: unset;
+  top: auto;
+  left: auto;
+  position: static;
+}
+
+.login .message,
+.login #login_error {
+  margin-bottom: 20px;
+}
+
+.login h1 a {
+  background-image: none;
+  font-size: 32px;
+  font-weight: bold;
+  height: auto;
+  margin: 0 0 20px 0;
+  width: auto;
+  text-indent: 0;
+}
+
+.login form {
+  background: transparent;
+  box-shadow: none;
+  margin-top: 0;
+  padding: 0;
+}
+
+.login label {
+  font-size: 16px;
+}
+
+.login form .forgetmenot {
+  float: none;
+}
+
+.login form .input,
+.login input[type="text"] {
+  padding: 5px 10px;
+  text-align: center;
+  box-shadow: none;
+}
+.login form .input:-moz-placeholder,
+.login input[type="text"]:-moz-placeholder {
+  font-weight: 300;
+}
+.login form .input::-moz-placeholder,
+.login input[type="text"]::-moz-placeholder {
+  font-weight: 300;
+}
+.login form .input:-ms-input-placeholder,
+.login input[type="text"]:-ms-input-placeholder {
+  font-weight: 300;
+}
+.login form .input::-webkit-input-placeholder,
+.login input[type="text"]::-webkit-input-placeholder {
+  font-weight: 300;
+}
+
+.login form .input,
+.login input[type="text"],
+.login form input[type="checkbox"] {
+  border: 0 none;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus,
+.login input[type="email"]:focus,
+.login input[type="number"]:focus,
+.login input[type="url"]:focus,
+.login input[type="checkbox"]:focus,
+.login input[type="radio"]:focus {
+  box-shadow: none;
+}
+
+#nav,
+.login #backtoblog {
+  text-align: center;
+}
+
+.login #nav {
+  margin: 10px 0;
+}
+
+/**
+ * Button
+ */
+#wp-submit.button-primary {
+  border: 0;
+  box-shadow: none;
+  display: block;
+  float: none;
+  font-size: 16px;
+  height: auto;
+  margin-top: 20px;
+  width: 100%;
+  text-shadow: none;
+}
+
+#wp-submit.button-primary:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+  border-color: #000 \9;
+}

@@ -1,0 +1,290 @@
+/* General Customizer style tweaks */
+.customize-control-title {
+	margin-top: 5px;
+}
+span.description {
+	margin-bottom: 10px;
+	font-style: normal;
+}
+#customize-controls .description {
+	color: #999;
+}
+
+/* Misc control styles */
+.cb-control-group-title {
+	color: #222222;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 14px 0 6px;
+}
+.customize-control.customize-control-heading {
+	margin-top: 6px;
+	margin-bottom: -2px;
+}
+.customize-control.customize-control-line {
+	margin-top: 10px;
+	margin-bottom: 6px;
+}
+
+/* Radio control styles */
+.customize-control-radio-buttonset,
+.customize-control-radio-image,
+.customize-control-radio-background-position {
+	padding: 0;
+}
+.customize-control-radio-buttonset .customize-control-title,
+.customize-control-radio-image .customize-control-title,
+.customize-control-radio-background-position .customize-control-title {
+	line-height: 24px;
+	margin-bottom: 5px;
+}
+.cb-control-buttonset label {
+	line-height: 28px;
+	padding: 5px 10px;
+}
+.image.ui-buttonset label.ui-button {
+	padding: 2px;
+	line-height: 0;
+	border-radius: 0;
+	margin-right: 0;
+	background: #999;
+	border: 0;
+}
+li .image.ui-buttonset label.ui-button {
+	margin-bottom: 10px;
+	margin-right: 15px;
+}
+.cb-control-buttonset label,
+.cb-control-background-position label {
+	border-color: #fff;
+}
+.cb-control-buttonset label.ui-state-default,
+.cb-control-background-position label.ui-state-default {
+	background: #eee;
+}
+.cb-control-buttonset label.ui-button{
+    display: inline-block;
+}
+.cb-control-buttonset label.ui-state-hover,
+.cb-control-background-position label.ui-state-hover {
+	color: #0074a2;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, .25);
+}
+.cb-control-buttonset label.ui-state-active,
+.cb-control-background-position label.ui-state-active {
+	color: #212121;
+	background: #fff;
+}
+
+/* Background Position Button Set */
+.cb-control-background-position.ui-buttonset {
+	float: left;
+	height: 90px;
+	width: 90px;
+}
+.cb-control-background-position.ui-buttonset .ui-button {
+	margin-right: 0;
+}
+.cb-control-background-position label {
+	display: block;
+	float: left;
+	height: 28px;
+	width: 28px;
+}
+.cb-control-background-position label.ui-state-default:hover {
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, .25);
+}
+.cb-control-background-position label.ui-state-active:hover {
+	background-color: #fff;
+}
+.cb-control-background-position .choice-1 {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 0px;
+}
+.cb-control-background-position .choice-2 {
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+.cb-control-background-position .choice-3 {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 0px;
+}
+.cb-control-background-position .choice-4 {
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+.cb-control-background-position .choice-5 {
+	border-color: transparent;
+}
+.cb-control-background-position .choice-6 {
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+.cb-control-background-position .choice-7 {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 4px;
+}
+.cb-control-background-position .choice-8 {
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+.cb-control-background-position .choice-9 {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 4px;
+}
+.background-position-caption {
+	font-size: 12px;
+	line-height: 12px;
+	padding-top: 39px;
+	padding-left: 5px;
+}
+
+/* Range control styles */
+li.customize-control.customize-control-range .cb-control-range ,
+li.customize-control.customize-control-border .cb-control-range ,
+
+li.customize-control.customize-control-typography .cb-control-range {
+	float: left;
+	width: 25%;
+}
+li.customize-control.customize-control-range .cb-range-slider,
+li.customize-control.customize-control-border .cb-range-slider,
+li.customize-control.customize-control-typography .cb-range-slider {
+	float: right;
+	width: 70%;
+	margin-top: 8px;
+}
+li.customize-control.customize-control-range .ui-slider-handle ,
+li.customize-control.customize-control-border .ui-slider-handle ,
+li.customize-control.customize-control-typography .ui-slider-handle {
+	top: -.4em;
+	border-color: #777;
+	background: #777;
+}
+li.customize-control.customize-control-range .ui-slider-horizontal,
+li.customize-control.customize-control-border .ui-slider-horizontal,
+li.customize-control.customize-control-typography .ui-slider-horizontal {
+	height: .6em;
+	border-color: #fff;
+	background: #fff;
+}
+
+li.customize-control.customize-control-range .ui-slider-handle,
+li.customize-control.customize-control-border .ui-slider-handle,
+li.customize-control.customize-control-typography .ui-slider-handle {
+	border-radius: 100%;
+}
+li.customize-control.customize-control-range .ui-slider-handle:hover,
+li.customize-control.customize-control-border .ui-slider-handle:hover,
+li.customize-control.customize-control-typography .ui-slider-handle:hover {
+	cursor: pointer;
+}
+
+/* jQuery UI theme tweaks */
+.ui-widget {
+	font-family: inherit;
+	font-size: 0.85em;
+}
+.ui-button-text-only .ui-button-text {
+	padding: 0;
+}
+
+/* Chosen tweaks */
+.chosen-container .chosen-drop {
+	box-shadow: none;
+}
+.chosen-container-active .chosen-choices,
+.chosen-container-active .chosen-single {
+	border: 1px solid #aaaaaa;
+	box-shadow: none;
+}
+
+
+/*** Justin's customize controls */
+/**
+ * Customize Controls Stylesheet
+ * @version 20150507
+ */
+
+/* === Palette Control === */
+
+.customize-control-palette label {
+	display: block;
+	padding: 0 10px 10px;
+}
+
+.customize-control-palette label.selected {
+	padding-top: 5px;
+	background-color: #ddd;
+}
+
+	.customize-control-palette .palette-label {
+		line-height: 28px;
+	}
+
+	.customize-control-palette .palette-block {
+		display: table;
+		width:   100%;
+		height:  45px;
+	}
+
+		.customize-control-palette .palette-color {
+			display: table-cell;
+			height:  100%;
+		}
+
+/* === Radio Image Control === */
+
+.customize-control-radio-image input[type="radio"] {
+	clip:     rect(1px, 1px, 1px, 1px);
+	height:   1px;
+	overflow: hidden;
+	position: absolute !important;
+	width:    1px;
+}
+
+.customize-control-radio-image img {
+	box-sizing: border-box;
+	max-width:  100%;
+	height:     auto;
+	padding:    1px;
+	border:     4px solid transparent;
+}
+
+	.customize-control-radio-image img:hover,
+	.customize-control-radio-image img:focus {
+		border-color: #ccc;
+	}
+
+	.customize-control-radio-image input:checked + span + img {
+		border-color: #00a0d2;
+	}
+	.customize-control-cb h5{
+		margin-bottom: 0;
+	}
+	.customize-control-typography {
+		padding: 0 5px 5px;
+		background: #f7f7f7;
+	}
+	
+	#customize-control-header-background-title span.customize-control-title,
+	#customize-control-header-top-styling-title span.customize-control-title,
+	#customize-control-header-main-styling-title span.customize-control-title ,
+	#customize-control-header-bottom-styling-title span.customize-control-title,
+	#customize-control-main-nav-selected-option-heading h4.cb-control-group-title,
+	#customize-control-sub-nav-option-heading h4n.cb-control-group-title	{
+		font-size: 1.6em;
+		color: #888;
+		margin-top: 20px;
+		font-weight: normal;
+	}
+	
+	
+	
+	#accordion-section-cb_header-styling span.customize-control-title,
+	#accordion-section-cb_main-menu-styling span.customize-control-title {
+		font-weight: normal;
+	}
+	

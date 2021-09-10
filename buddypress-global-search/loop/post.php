@@ -1,0 +1,1 @@
+<?php get_template_part( 'template-parts/entry-' . cb_get_posts_display_type(), get_post_type() ); ?>

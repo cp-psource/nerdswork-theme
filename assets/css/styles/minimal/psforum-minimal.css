@@ -1,0 +1,161 @@
+/**
+ * PSForum Appearance
+ *
+ * WMS N@W Theme Minimalistic Stylesheet for PSForum Forums
+ *
+ */
+
+
+/** --------------------------------------------------
+    Variables
+-----------------------------------------------------*/
+
+
+/* =PSForum Style
+	--- Theming
+-------------------------------------------------------------- */
+
+li.psf-header {
+    color: #888;
+    border: 1px solid #F2F2F2;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    border-bottom: 0;
+}
+
+.psf-forum-topic-count,
+.psf-forum-reply-count {
+    color: #888;
+}
+
+.psf-body {
+    border: 1px solid #f2f2f2;
+}
+
+.psf-body ul.forum,
+.psf-body ul.topic {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.psf-body ul.forum:hover,
+.psf-body ul.topic:hover {
+    border-bottom: 1px solid #fff;
+    background: #f2f2f2;
+}
+
+.psf-forums-list {
+    border-left: 1px solid #ddd;
+}
+
+.psf-forums-list li {
+    display: inline;
+    font-size: .9em;
+}
+
+span.psf-author-ip {
+    font-weight: bold;
+    color: gray;
+}
+
+div.psf-forum-author,
+div.psf-topic-author,
+div.psf-reply-author,
+div.psf-search-author {
+    font-size: .8em;
+    text-align: center;
+}
+
+div.psf-forum-author a.psf-author-name,
+div.psf-topic-author a.psf-author-name,
+div.psf-reply-author a.psf-author-name,
+div.psf-search-author a.psf-author-name {
+    font-size: 1.2em;
+}
+
+div.psf-forum-author .psf-author-role,
+div.psf-topic-author .psf-author-role,
+div.psf-reply-author .psf-author-role,
+div.psf-search-author .psf-author-role {
+    font-style: italic;
+}
+
+.psf-forum-info .psf-forum-content,
+p.psf-topic-meta {
+    font-size: .85em;
+    word-wrap: break-word;
+    color: #888;
+}
+
+.psf-meta {
+    font-size: .8em;
+}
+
+.psf-reply-post-date {
+    font-size: .8em;
+}
+
+
+/* =Stickies
+-------------------------------------------------------------- */
+
+.psf-topics-front ul.super-sticky,
+.psf-topics ul.super-sticky,
+.psf-topics ul.sticky,
+.psf-forum-content ul.sticky {
+    background-color: #ffffcf;
+}
+
+
+/* =Revisions
+-------------------------------------------------------------- */
+
+.psf-topic-content ul.psf-topic-revision-log,
+.psf-reply-content ul.psf-topic-revision-log,
+.psf-reply-content ul.psf-reply-revision-log {
+    border-top: 1px dotted #ddd;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0;
+    font-size: .85em;
+    color: #888;
+}
+
+.psf-topic-content ul.psf-topic-revision-log li,
+.psf-reply-content ul.psf-topic-revision-log li,
+.psf-reply-content ul.psf-reply-revision-log li {
+    list-style-type: none;
+}
+
+.psf-reply-item {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+
+/** Current lin in PSForum profile */
+
+#psf-user-navigation li.current a {
+    background: #eee;
+    opacity: 0.8;
+}
+
+.psf-form {
+    font-size: .9em;
+}
+
+fieldset.psf-form {
+    border: 1px solid #eee;
+}
+
+fieldset span.description {
+    border: 1px solid #cee1ef;
+    background-color: #f0f8ff;
+}
+
+#item-body #psforum-forums>h3 {
+    margin-bottom: 10px;
+}
+
+.psf-form label,
+.psf-form span.label {
+    font-size: 1em;
+}

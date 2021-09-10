@@ -1,0 +1,1944 @@
+/** --------------------------------------------------
+    Variables
+-----------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+ // 1.1 Generic elements
+--------------------------------------------------------------*/
+
+::selection,
+::-moz-selection,
+::-webkit-selection {
+    background: #e2eae2;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-family: 'Droid Sans',  Arial, Tahoma, Verdana, sans-serif;*/
+    line-height: 1.33em;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+hr {
+    background-color: rgba(51, 51, 51, 0.1);
+    border: 0;
+    clear: both;
+    height: 1px;
+    margin-bottom: 15px;
+}
+
+blockquote {
+    border-left: 4px solid rgba(51, 51, 51, 0.7);
+    color: rgba(51, 51, 51, 0.7);
+    font-size: 20px;
+}
+
+blockquote cite,
+blockquote small {
+    color: #333;
+    font-size: .9em;
+}
+
+
+/**
+ * Table
+ */
+
+table,
+th,
+td {
+    border: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+
+/**
+ * Links
+ */
+
+a {
+    color: #333;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover,
+a:active {
+    color: #444;
+}
+
+
+/*--------------------------------------------------------------
+ //1.2 Form
+--------------------------------------------------------------*/
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+:-ms-input-placeholder {
+    color: #888;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+legend {
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.375;
+    color: #666666;
+    background-color: #fff;
+    background-image: none;
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(102, 175, 233, 0.6);
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #888;
+    opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #888;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #888;
+}
+
+input[disabled],
+input[readonly],
+fieldset[disabled] input,
+textarea[disabled],
+textarea[readonly],
+fieldset[disabled] textarea {
+    background-color: #f2f2f2;
+    opacity: 1;
+}
+
+input[disabled],
+fieldset[disabled] input,
+textarea[disabled],
+fieldset[disabled] textarea {
+    cursor: not-allowed;
+}
+
+input:focus,
+textarea:focus {
+    outline: 0;
+}
+
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+
+input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+}
+
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+
+input:not([type]):focus {
+    outline: 0;
+    border-color: #129FEA;
+}
+
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+
+input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: #f2f2f2;
+}
+
+input[readonly],
+select[readonly],
+textarea[readonly] {
+    background-color: #eee;
+    /* menu hover bg color */
+    border-color: #d8d8d8;
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+    color: #f0ad4e;
+    border-color: #f0ad4e;
+}
+
+input[type="file"]:focus:invalid:focus,
+input[type="radio"]:focus:invalid:focus,
+input[type="checkbox"]:focus:invalid:focus {
+    outline-color: #f0ad4e;
+}
+
+
+/**
+ * BuddyPress Forms
+ */
+
+.standard-form label,
+.standard-form span.label {
+    font-size: .9em;
+    color: #4d4d4d;
+}
+
+.wp-editor-container {
+    border: 1px solid #eee;
+}
+
+
+/*--------------------------------------------------------------
+ 1.4 Generic Classes
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 420px) {
+    .arrow-left {
+        position: relative;
+        background-color: #f7f7f7;
+    }
+    .arrow-left:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: solid 10px;
+        border-color: transparent transparent transparent transparent;
+        border-right-color: #f7f7f7;
+        left: -20px;
+        position: absolute;
+    }
+}
+
+
+/*--------------------------------------------------------------
+  Social Links
+--------------------------------------------------------------*/
+
+ul.social-links .fa {
+    font-size: 22px;
+}
+
+
+/**
+ * Extra overflow nav hamburger
+ */
+
+li.sa-stacker .fa {
+    font-weight: bold;
+}
+
+
+/*--------------------------------------------------------------
+ 2 Layout
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+  2.1 Site Header
+--------------------------------------------------------------*/
+
+#header {
+    background: #041D37;
+    color: #666;
+}
+
+
+/** Site Header -> Top Row [if enabled]*/
+
+#header-top-row {
+    background: #00a39d;
+}
+
+
+/** Site Header -> Bottom Row [if enabled] */
+
+#header-bottom-row {
+    background: #00a39d;
+}
+
+
+/**
+ * Site Logo
+ */
+
+.logo-text {
+    font-size: 28px;
+}
+
+.logo-text a {
+    color: #f0f0f0;
+}
+
+
+/**
+ * Header account menu/buttons
+ */
+
+.header-links .count-pending-alert {
+    background: #d9534f;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.site-header-row #search-terms,
+.site-header-row #search-submit {
+    height: 32px;
+}
+
+
+/*--------------------------------------------------------------
+ //==== Page header
+--------------------------------------------------------------*/
+
+.page-header {
+    background-color: #2b4c6f;
+}
+
+.page-header .page-header-title {
+    color: #f0f0f0;
+    font-size: 32px;
+    line-height: 1.33em;
+}
+
+.page-header .page-header-meta {
+    font-size: 16px;
+    line-height: 1.33em;
+    color: #888;
+}
+
+.page-header-mask-enabled .page-header-mask,
+.has-cover-image .page-header-mask {
+    background: rgba(1, 1, 1, 0.2);
+}
+
+
+/*--------------------------------------------------------------
+//==== Site Background etc
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+ Site Footer
+--------------------------------------------------------------*/
+
+#footer {
+    font-size: 14px;
+    color: #eee;
+}
+
+#footer a {
+    color: #333;
+}
+
+#footer a:hover {
+    color: #444;
+}
+
+#footer-widget-area {
+    background: #fff;
+}
+
+#site-copyright {
+    text-align: center;
+    font-size: 14px;
+    background: #e6e6e6;
+    color: #333333;
+}
+
+
+/*--------------------------------------------------------------
+ //== Blog
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+ //=== Blog Articles
+--------------------------------------------------------------*/
+
+article.sticky {
+    background: #FFE7A3;
+}
+
+.wp-caption-text {
+    color: gray;
+    font-size: 0.9em;
+}
+
+
+/*--------------------------------------------------------------
+//=== Blog Comments
+--------------------------------------------------------------*/
+
+#commentform input[type='text']:focus,
+#commentform input[type='email']:focus,
+#commentform input[type='url']:focus,
+#commentform textarea#comment:focus {
+    border-left: 5px solid #7cbbec;
+}
+
+#commentform textarea#comment {
+    padding: 5px 10px;
+    width: 100%;
+}
+
+#comments-title {
+    color: #888;
+}
+
+.comment-body {
+    border: 1px solid #eee;
+}
+
+.comment .reply {
+    background: #f7f7f7;
+    border-top: 1px solid #dfe4e7;
+}
+
+p.comment-notes {
+    background: #ECEBA3;
+}
+
+
+/*--------------------------------------------------------------
+ //=== Widgets
+--------------------------------------------------------------*/
+
+.widgettitle {
+    color: #888;
+}
+
+
+/*--------------------------------------------------------------
+ //=== Main Menu
+--------------------------------------------------------------*/
+
+#nav>ul>li>a {
+    padding: 15px 20px;
+    color: #BCCAD9;
+    -webkit-transition: color 0.25s ease-out;
+    -o-transition: color 0.25s ease-out;
+    transition: color 0.25s ease-out;
+}
+
+#header-top-row #nav>ul>li>a {
+    color: #333;
+    padding: 5px 20px;
+}
+
+#header-top-row #nav>ul>li:hover>ul {
+    top: 24px;
+}
+
+#nav>ul>li.menu-item-has-children>a {
+    padding-right: 32px;
+}
+
+#nav>ul>li:hover>a,
+#nav li.current-menu-item>a #nav li.fa.current-menu-item::before,
+#nav .current-menu-parent>a {
+    color: #BCCAD9;
+}
+
+#nav>ul>li.menu-item-has-children::after {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    border: 5px solid transparent;
+    border-top-color: #041D37;
+}
+
+#nav>ul>li:hover::after {
+    border-top-color: #eee;
+}
+
+#nav>ul>li.menu-item-has-children li {
+    background: #041D37;
+    color: #9ea2a5;
+    width: 185px;
+    display: block;
+    border-bottom: 1px solid #eeeeee;
+    -webkit-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+#nav>ul>li.menu-item-has-children li a {
+    padding: 15px 10px;
+}
+
+#nav>ul>li.menu-item-has-children li::before {
+    left: 5px;
+}
+
+#nav ul ul li a {
+    color: #9ea2a5;
+}
+
+#nav ul ul li:hover {
+    background: #eee;
+    color: #8c9195;
+}
+
+#nav ul ul li:hover a {
+    color: #8c9195;
+}
+
+#nav ul ul li:last-child,
+#nav ul ul li.last {
+    border-bottom: 0;
+}
+
+#nav>ul>li>ul::after {
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom-color: #041D37;
+}
+
+
+/*------------------------- Components ------------------------------------------*/
+
+
+/**
+ * Scroll Up:- Scroll to top
+ */
+
+#scrollUp {
+    right: 20px;
+    bottom: 20px;
+    font-size: 38px;
+    color: #041D37;
+}
+
+
+/**
+ * Pagination
+ */
+
+.pagination {
+    font-size: 14px;
+}
+
+.pagination span.current {
+    background: #fff;
+    color: #fff;
+}
+
+.pagination a,
+.pagination span.page-numbers {
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    background: #041D37;
+    color: #666;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+ //=== Buttons module
+--------------------------------------------------------------*/
+
+.button {
+    background: #041d37;
+    color: #fff;
+    font-size: 16px;
+}
+
+.button i.fa {
+    padding-right: 5px;
+    color: #888;
+}
+
+.button:active,
+.button:focus {
+    background: #298C85;
+    color: #fff;
+}
+
+.button:active i.fa,
+.button:focus i.fa {
+    color: #fff;
+}
+
+.btn-primary,
+.btn-selected {
+    background: #041d37;
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn-primary i.fa,
+.btn-selected i.fa {
+    padding-right: 5px;
+    color: #888;
+}
+
+.btn-primary:active,
+.btn-primary:focus,
+.btn-selected:active,
+.btn-selected:focus {
+    background: #298C85;
+    color: #fff;
+}
+
+.btn-primary:active i.fa,
+.btn-primary:focus i.fa,
+.btn-selected:active i.fa,
+.btn-selected:focus i.fa {
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #041D37;
+    color: #666;
+    font-size: 12px;
+}
+
+.btn-secondary i.fa {
+    padding-right: 5px;
+    color: #666;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background: #1FB3DD;
+    color: #eee;
+}
+
+.btn-secondary:hover i.fa,
+.btn-secondary:focus i.fa {
+    color: #666;
+}
+
+.btn-danger {
+    background: #d9534f;
+    color: #fff;
+}
+
+.btn-danger i.fa {
+    padding-right: 5px;
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+    background: #c9302c;
+    color: #eee;
+}
+
+
+/*--------------------------------------------------------------
+ //=== Buttons Dropdown
+--------------------------------------------------------------*/
+
+.dropdown-menu {
+    font-size: 16px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+}
+
+.dropdown-menu a {
+    line-height: 1.375;
+    color: #333;
+    white-space: nowrap;
+    margin-bottom: 1px;
+    padding: 2px 8px;
+    text-align: left;
+}
+
+.dropdown-header {
+    font-size: 12px;
+    line-height: 1.375;
+    color: #333;
+    white-space: nowrap;
+}
+
+
+/*--------------------------------------------------------------
+//=== Offcanvas Menus
+--------------------------------------------------------------*/
+
+
+/**
+ * Offcanvas Panels Toggle icons
+ */
+
+#panel-left-toggle,
+#panel-right-toggle {
+    color: #BCCAD9;
+    /*&:hover {
+      color: $primary-color;
+  }*/
+}
+
+#panel-left-toggle i.fa,
+#panel-right-toggle i.fa {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.panel-sidebar {
+    padding: 0 0 10px;
+    background: #222D32;
+    color: #fff;
+}
+
+.panel-sidebar .panel-user-display-name {
+    font-size: 18px;
+    display: block;
+}
+
+.panel-menu>li>a>.fa {
+    font-size: .85em;
+}
+
+.panel-menu .treeview-menu>li>a {
+    font-size: 14px;
+}
+
+
+/*
+ * Panel Menu Skin: Dark
+ * -----------
+ */
+
+.panel-menu a {
+    color: #b8c7ce;
+}
+
+.panel-menu>li>a {
+    border-left: 3px solid transparent;
+}
+
+.panel-menu>li:hover>a,
+.panel-menu>li.active>a {
+    color: #fff;
+    background: #1e282c;
+    border-left-color: #041D37;
+}
+
+.panel-menu>li>.treeview-menu {
+    margin: 0 1px;
+    background: #2c3b41;
+}
+
+.panel-menu.treeview-menu>li>a {
+    color: #8aa4af;
+}
+
+.panel-menu .treeview-menu>li.active>a,
+.panel-menu .treeview-menu>li>a:hover {
+    color: #fff;
+}
+
+.panel-sidebar h1,
+.panel-sidebar h2,
+.panel-sidebar h3,
+.panel-sidebar h4,
+.panel-sidebar h5,
+.panel-sidebar h6,
+.panel-sidebar .h1,
+.panel-sidebar .h2,
+.panel-sidebar .h3,
+.panel-sidebar .h4,
+.panel-sidebar .h5,
+.panel-sidebar .h6 {
+    color: #fff;
+}
+
+.panel-sidebar div#message p,
+.panel-sidebar div#site-feedback-message p {
+    color: #333;
+    text-align: left;
+}
+
+.panel-sidebar p.login-text {
+    color: #fff;
+}
+
+.panel-sidebar .panel-login-form {
+    color: #fff;
+}
+
+.panel-right-header a {
+    color: #fff;
+}
+
+.panel-header h1 {
+    font-weight: bold;
+}
+
+.panel-header h1 a {
+    color: #fff;
+}
+
+.panel-login-header {
+    font-size: 22px;
+}
+
+.panel-form label {
+    color: #fff;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.panel-form input[type="text"],
+.panel-form input[type="password"] {
+    height: 35px;
+    margin-top: 5px;
+    background-color: #374850;
+    color: #666;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.panel-form input[type="text"]:focus,
+.panel-form input[type="password"]:focus {
+    background-color: #fff;
+    color: #666;
+}
+
+
+/**
+ * Panel Widgets
+ */
+
+.panel-widgets {
+    /**
+  * Arrow color override
+  */
+}
+
+.panel-widgets .widgettitle {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.panel-widgets .buddypress.widget .widgettitle {
+    color: #fff;
+}
+
+.panel-widgets .widget>ul:before,
+.panel-widgets .buddypress.widget ul.item-list::before,
+.panel-widgets .buddypress.widget ul.item-list::after,
+.panel-widgets .widget div.tagcloud::before,
+.panel-widgets .widget div.avatar-block::before,
+.panel-widgets .widget div.tagcloud::after,
+.panel-widgets .widget div.avatar-block::after {
+    border-color: transparent transparent rgba(128, 128, 128, 0.1) transparent;
+}
+
+.panel-widgets .widget>ul,
+.panel-widgets .widget ul.item-list,
+.panel-widgets .widget div.avatar-block,
+.panel-widgets .widget div.tagcloud {
+    background: rgba(128, 128, 128, 0.1);
+    padding: 10px;
+}
+
+.panel-widgets .widget ul.item-list {
+    clear: both;
+}
+
+.panel-widgets .widget ul.item-list li {
+    border-bottom: 1px solid rgba(238, 238, 238, 0.1) !important;
+}
+
+.panel-widgets .widget ul.item-list li:last-child {
+    border-bottom: none !important;
+}
+
+.panel-widgets .widget .item-options a.selected {
+    background: rgba(128, 128, 128, 0.1);
+}
+
+
+/* ------------------------- Typography Base ---------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: #444;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 small,
+h1 .small,
+h2 small,
+h2 .small,
+h3 small,
+h3 .small,
+h4 small,
+h4 .small,
+h5 small,
+h5 .small,
+h6 small,
+h6 .small,
+.h1 small,
+.h1 .small,
+.h2 small,
+.h2 .small,
+.h3 small,
+.h3 .small,
+.h4 small,
+.h4 .small,
+.h5 small,
+.h5 .small,
+.h6 small,
+.h6 .small {
+    font-weight: normal;
+    line-height: 1;
+    color: #464646;
+}
+
+h1 small,
+h1 .small,
+.h1 small,
+.h1 .small,
+h2 small,
+h2 .small,
+.h2 small,
+.h2 .small,
+h3 small,
+h3 .small,
+.h3 small,
+.h3 .small {
+    font-size: .65em;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin: 10px 0;
+}
+
+h4 small,
+h4 .small,
+.h4 small,
+.h4 .small,
+h5 small,
+h5 .small,
+.h5 small,
+.h5 .small,
+h6 small,
+h6 .small,
+.h6 small,
+.h6 .small {
+    font-size: .75em;
+}
+
+h1,
+.h1 {
+    font-size: 28px;
+}
+
+h2,
+.h2 {
+    font-size: 24px;
+}
+
+h3,
+.h3 {
+    font-size: 22px;
+}
+
+h4,
+.h4 {
+    font-size: 18px;
+}
+
+h5,
+.h5 {
+    font-size: 16px;
+}
+
+h6,
+.h6 {
+    font-size: 14px;
+}
+
+h1,
+h2 {
+    margin-bottom: 10px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 10px;
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 22px;
+}
+
+@media (min-width: 768px) {
+    .lead {
+        font-size: 24px;
+    }
+}
+
+
+/***
+*
+* WMS N@W Theme Addons CSS
+*/
+
+
+/**
+ * Social links
+*/
+
+ul.social-links li {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+
+/**
+ * Breadcrumb
+ */
+
+#breadcrumb p {
+    margin: 0;
+}
+
+#breadcrumb>.inner {
+    padding: 5px 20px;
+}
+
+a.adverts-button-small {
+    height: auto;
+}
+
+div.advert-item-col-1 {
+    padding: 10px;
+}
+
+
+/*Geo Dir breadcrumb*/
+
+.geodir-breadcrumb {
+    padding: 10px 20px;
+}
+
+.geodir_map_container {
+    z-index: 5 !important;
+}
+
+body .lSSlideOuter .lSPager.lSpg>li a {
+    z-index: 2;
+}
+
+
+/*--------------------------------------------------------------
+ BuddyPress
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+ Errors / Success Messages
+--------------------------------------------------------------*/
+
+div#site-feedback-message,
+div#message,
+.psf-template-notice,
+div.indicator-hint,
+div.indicator-hint {
+    margin: 0 0 15px;
+}
+
+div#site-feedback-message #message {
+    margin-bottom: 0;
+}
+
+.bp-template-notice i.fa {
+    cursor: pointer;
+    padding-left: 5px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/*
+* For directory/create group notices, should have same offset as the actual content
+*/
+
+#content>div#message {
+    margin: 0 20px;
+}
+
+div#message.updated {
+    clear: both;
+}
+
+div#site-feedback-message {
+    background: #ECEBA3;
+}
+
+p.error,
+div#message p,
+.psf-template-notice,
+div.indicator-hint {
+    background: #ECEBA3;
+    display: block;
+    font-size: 14px;
+    padding: 10px 15px;
+    position: relative;
+}
+
+div#site-feedback-message.error {
+    background: #e41717;
+}
+
+div#message.error p,
+p.error {
+    background: #e41717;
+    color: #fff;
+    clear: both;
+}
+
+div#site-feedback-message.updated {
+    background: #73c8a9;
+}
+
+div#message.updated p,
+.psf-template-notice,
+div.indicator-hint {
+    background: #73c8a9;
+    color: #fff;
+}
+
+.standard-form#signup_form div.error {
+    background: #e41717;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    margin: 0 0 10px 0;
+    padding: 6px;
+    width: 90%;
+}
+
+
+/**
+ * Hide top pagination
+ */
+
+#pag-top {
+    display: none;
+}
+
+.dropdown-toggle i {
+    font-size: 24px;
+}
+
+
+/*--------------------------------------------------------------
+ Activity
+--------------------------------------------------------------*/
+
+form#whats-new-form textarea:-moz-placeholder {
+    color: #444;
+    font-style: italic;
+}
+
+form#whats-new-form textarea::-moz-placeholder {
+    color: #444;
+    font-style: italic;
+}
+
+form#whats-new-form textarea:-ms-input-placeholder {
+    color: #444;
+    font-style: italic;
+}
+
+form#whats-new-form textarea::-webkit-input-placeholder {
+    color: #444;
+    font-style: italic;
+}
+
+ul.activity-list li.activity-item {
+    border-bottom: none;
+}
+
+
+/**
+ * Arrow position
+ */
+
+li.activity-item::before,
+li.activity-item::after {
+    top: 35px;
+}
+
+.activity-content .activity-header,
+.activity-content .comment-header {
+    color: #888;
+}
+
+.activity-header a,
+.comment-meta a,
+.acomment-meta a {
+    text-decoration: none;
+}
+
+span.highlight {
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 0;
+    text-decoration: none;
+}
+
+.activity-content img.thumbnail {
+    border: 2px solid #eee;
+    float: left;
+    margin: 10px;
+}
+
+.activity-read-more {
+    margin-left: 1em;
+    white-space: nowrap;
+}
+
+div.activity-comments ul li {
+    border-top: 2px solid #fff;
+}
+
+div.activity-meta a {
+    padding: 5px 10px;
+    vertical-align: bottom;
+}
+
+a.activity-time-since {
+    color: #aaa;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+a.activity-time-since:hover {
+    color: #888;
+    text-decoration: underline;
+}
+
+a.bp-primary-action,
+a.bp-secondary-action,
+#reply-title small a {
+    font-size: 12px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+a.bp-primary-action span,
+#reply-title small a span {
+    background: #bccad9;
+    border-radius: 3px;
+    font-size: 90%;
+    color: #fff;
+    margin-left: 2px;
+    padding: 0 5px;
+}
+
+a.bp-primary-action:hover span,
+#reply-title small a:hover span {
+    background: #555;
+    color: #fff;
+}
+
+div.acomment-content .time-since,
+div.acomment-content .activity-delete-link,
+div.acomment-content .comment-header {
+    display: none;
+}
+
+div.activity-comments div.acomment-meta {
+    color: #888;
+}
+
+.acomment-content,
+.activity-inner {
+    font-size: 14px;
+}
+
+.acomment-options a {
+    color: #888;
+}
+
+div.activity-comments form.loading {
+    background-image: url(../../images/ajax-loader.gif);
+    background-position: 2% 95%;
+    background-repeat: no-repeat;
+}
+
+div.activity-comments form .ac-textarea {
+    margin-bottom: 5px;
+}
+
+
+/* =Forum
+-------------------------------------------------------------- */
+
+.activity-list li.psf_topic_create .activity-content .activity-inner,
+.activity-list li.psf_reply_create .activity-content .activity-inner,
+.activity-list li.new_forum_post .activity-content .activity-inner,
+.activity-list li.new_forum_topic .activity-content .activity-inner {
+    border-left: 2px solid #eaeaea;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+
+
+/*--------------------------------------------------------------
+ BuddyPress Directory
+--------------------------------------------------------------*/
+
+
+/**
+ * Item header background when no image available
+ */
+
+.item-gradient .item-entry-header {
+    background-image: -webkit-linear-gradient(top, #00b0ba 0%, #328F94 100%);
+    background-image: -o-linear-gradient(top, #00b0ba 0%, #328F94 100%);
+    background-image: linear-gradient(to bottom, #00b0ba 0%, #328F94 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#FF00B0BA', endColorstr='#FF328F94', GradientType=0);
+}
+
+.odd.item-gradient .item-entry-header {
+    background-image: -webkit-linear-gradient(top, #22C88B 0%, #73C8A9 100%);
+    background-image: -o-linear-gradient(top, #22C88B 0%, #73C8A9 100%);
+    background-image: linear-gradient(to bottom, #22C88B 0%, #73C8A9 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#FF22C88B', endColorstr='#FF73C8A9', GradientType=0);
+}
+
+.item-list>li .item-entry {
+    background: #fff;
+    border-radius: 5px;
+}
+
+span.activity-read-more a {
+    font-size: .8em;
+}
+
+
+/**
+ * Members last activity post message in directory
+  *
+ */
+
+
+/**
+ * Message List view
+ */
+
+.message-list li.alt {
+    background: #eee;
+}
+
+.thread-star .icon,
+.message-star-actions .icon {
+    color: #888;
+}
+
+.message-action-unstar .icon:before {
+    color: #FFD76E;
+}
+
+.thread-excerpt-content {
+    color: #888;
+    text-overflow: ellipsis;
+}
+
+.thread-last-active-time {
+    font-size: 12px;
+}
+
+
+/**
+ * Unread Message Item
+ */
+
+.unread .thread-from,
+.unread .thread-message-subject,
+.unread .thread-last-active-time {
+    font-weight: bold;
+}
+
+#message-recipients .highlight {
+    font-size: 12px;
+}
+
+#message-recipients .highlight a {
+    font-weight: bold;
+}
+
+.message-box.even {
+    background-color: #eee;
+}
+
+#send-reply .message-box {
+    background: transparent;
+    border: none;
+}
+
+.message-box-notice,
+.message-box-notice.even {
+    background-color: #eee;
+}
+
+
+/*
+ * Message metadata
+ */
+
+.message-metadata span.activity {
+    background: transparent;
+    color: #333;
+    font-size: 12px;
+}
+
+
+/**
+ * BuddyPress profile Edit
+ */
+
+ul.button-nav li.sa-stacker ul {
+    background: #e8e8e8;
+}
+
+.profile-fields .label {
+    font-weight: bold;
+    font-size: .9em;
+}
+
+.profile-fields .data {
+    font-size: .9em;
+}
+
+.editfield .description {
+    color: #888;
+    font-size: 12px;
+    line-height: 1.33;
+    padding: 5px 0;
+}
+
+.field-visibility-settings,
+.field-visibility-settings-toggle,
+.field-visibility-settings-notoggle {
+    color: #888;
+    font-size: .9em;
+}
+
+
+/**
+ * Cover Image
+ */
+
+.bp-cover-image-status .warning,
+.bp-avatar-status .warning {
+    background: #f0ad4e;
+    color: #fff;
+    padding: 10px;
+}
+
+.profile-change-avatar,
+.profile-change-cover-image {
+    font-size: .9em;
+}
+
+table.notification-settings .icon {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+table.notification-settings .yes {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+table.notification-settings .no {
+    font-size: 18px;
+    font-weight: normal;
+    width: 10%;
+}
+
+table.notification-settings tr:nth-child(odd) {
+    background: #eee;
+}
+
+table.profile-settings thead tr {
+    background: #eee;
+}
+
+table.profile-settings tr:nth-child(even) {
+    background: #eee;
+}
+
+
+/**
+ * User profile Settings
+*/
+
+#pass-strength-result {
+    font-size: 12px;
+    background: #f5f4cd;
+    padding: 5px;
+}
+
+#pass-strength-result:empty {
+    display: none;
+}
+
+table.notifications .notification-since {
+    color: #595959;
+    font-size: 12px;
+}
+
+
+/*
+ * BuddyPress Profile/Group Header
+*/
+
+#item-header {
+    background: #2b4c6f;
+    position: relative;
+}
+
+div#item-header h2 {
+    font-size: 28px;
+    line-height: 120%;
+    margin: 0 0 15px;
+}
+
+div#item-header h2 a {
+    color: #fff;
+    font-weight: bold;
+    color: #fff;
+}
+
+div#item-header div#item-meta {
+    margin: 15px 0 5px 0;
+    padding-bottom: 10px;
+}
+
+span.user-nicename {
+    display: inline-block;
+    color: #888;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+span.activity {
+    background: #133252;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 0 5px;
+    opacity: 0.8;
+}
+
+div#item-header div#item-actions h3 {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+}
+
+
+/**
+ * BuddyPress Item Nav
+ */
+
+#item-nav {
+    background: #fff;
+    position: relative;
+}
+
+#item-nav .inner {
+    padding: 0 20px;
+}
+
+.item-list-tabs li a {
+    color: #333;
+    font-size: 14px;
+}
+
+.item-list-tabs li a:hover {
+    color: black;
+}
+
+.item-list-tabs li a span {
+    background: #bccad9;
+    border-radius: 3px;
+    color: #333;
+    display: inline;
+    font-size: 90%;
+    margin-left: 2px;
+    padding: 1px 6px;
+}
+
+.item-list-tabs li.selected a,
+.item-list-tabs li.current a {
+    background-color: #fff;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #555;
+    font-weight: bold;
+}
+
+div#object-nav>ul {
+    height: 35px;
+    overflow: hidden;
+}
+
+.fa-object-nav-bars {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.item-list-tabs li.selected a span,
+.item-list-tabs li.current a span,
+.item-list-tabs li a:hover span {
+    background-color: #dde4eb;
+}
+
+ul li.loading a {
+    background-image: url(../../images/ajax-loader.gif);
+    background-position: 92% 50%;
+    background-repeat: no-repeat;
+    padding-right: 30px !important;
+}
+
+div#item-nav ul li.loading a {
+    background-position: 88% 50%;
+}
+
+
+/***
+ * Widget customization
+ */
+
+.widget .item-options {
+    color: #fff;
+}
+
+.widget .item-options a {
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.widget .item-options a.selected {
+    background: #f7f7f7;
+    padding: 0 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .profile-fields .label {
+        text-align: right;
+    }
+}
+
+a.accept:before,
+a.reject:before,
+a.bp-primary-action:before,
+a.bp-secondary-action:before,
+.generic-button a:before {
+    color: #888;
+}
+
+.activity-item .activity-meta a {
+    background: #dadcdf;
+    color: #888;
+}
+
+.activity-item .activity-meta a:before {
+    color: #888;
+}
+
+.item-entry-header>.action>.generic-button a {
+    background-color: #041d37;
+    color: #fff;
+}
+
+
+/* =PSForum Style
+	--- Theming
+-------------------------------------------------------------- */
+
+li.psf-header {
+    color: #888;
+    border: 1px solid #F2F2F2;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    border-bottom: 0;
+}
+
+.psf-forum-topic-count,
+.psf-forum-reply-count {
+    color: #888;
+}
+
+.psf-body {
+    border: 1px solid #f2f2f2;
+}
+
+.psf-body ul.forum,
+.psf-body ul.topic {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.psf-body ul.forum:hover,
+.psf-body ul.topic:hover {
+    border-bottom: 1px solid #fff;
+    background: #f2f2f2;
+}
+
+.psf-forums-list {
+    border-left: 1px solid #ddd;
+}
+
+.psf-forums-list li {
+    display: inline;
+    font-size: .9em;
+}
+
+span.psf-author-ip {
+    font-weight: bold;
+    color: gray;
+}
+
+div.psf-forum-author,
+div.psf-topic-author,
+div.psf-reply-author,
+div.psf-search-author {
+    font-size: .8em;
+    text-align: center;
+}
+
+div.psf-forum-author a.psf-author-name,
+div.psf-topic-author a.psf-author-name,
+div.psf-reply-author a.psf-author-name,
+div.psf-search-author a.psf-author-name {
+    font-size: 1.2em;
+}
+
+div.psf-forum-author .psf-author-role,
+div.psf-topic-author .psf-author-role,
+div.psf-reply-author .psf-author-role,
+div.psf-search-author .psf-author-role {
+    font-style: italic;
+}
+
+.psf-forum-info .psf-forum-content,
+p.psf-topic-meta {
+    font-size: .85em;
+    word-wrap: break-word;
+    color: #888;
+}
+
+.psf-meta {
+    font-size: .8em;
+}
+
+.psf-reply-post-date {
+    font-size: .8em;
+}
+
+
+/* =Stickies
+-------------------------------------------------------------- */
+
+.psf-topics-front ul.super-sticky,
+.psf-topics ul.super-sticky,
+.psf-topics ul.sticky,
+.psf-forum-content ul.sticky {
+    background-color: #FFE7A3;
+}
+
+
+/* =Revisions
+-------------------------------------------------------------- */
+
+.psf-topic-content ul.psf-topic-revision-log,
+.psf-reply-content ul.psf-topic-revision-log,
+.psf-reply-content ul.psf-reply-revision-log {
+    border-top: 1px dotted #ddd;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0;
+    font-size: .85em;
+    color: #888;
+}
+
+.psf-topic-content ul.psf-topic-revision-log li,
+.psf-reply-content ul.psf-topic-revision-log li,
+.psf-reply-content ul.psf-reply-revision-log li {
+    list-style-type: none;
+}
+
+.psf-reply-item {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+
+/** Current lin in PSForum profile */
+
+#psf-user-navigation li.current a {
+    background: #eee;
+    opacity: 0.8;
+}
+
+.psf-form {
+    font-size: .9em;
+}
+
+fieldset.psf-form {
+    border: 1px solid #eee;
+}
+
+fieldset span.description {
+    border: 1px solid #cee1ef;
+    background-color: #f0f8ff;
+}
+
+#item-body #psforum-forums>h3 {
+    margin-bottom: 10px;
+}
+
+.psf-form label,
+.psf-form span.label {
+    font-size: 1em;
+}
+
+a.btn {
+    color: #fff;
+}
+
+.item-list-tabs li a:before {
+    color: #2C3A49;
+}
+
+#header {
+    background: #041d37;
+}
+
+#nav>ul>li.menu-item-has-children li {
+    border-bottom-color: #2B4C6F;
+}
+
+.item-list-tabs li a::before {
+    display: block;
+    margin: 0 auto;
+    font-size: 32px;
+}
+
+.item-list-tabs li a {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 2px 10px;
+}
+
+.sa-open li span {
+    float: none;
+}
+
+.item-list-tabs#subnav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#object-nav .sa-stacker {
+    top: -20px;
+}
