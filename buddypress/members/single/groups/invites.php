@@ -32,7 +32,7 @@ do_action( 'bp_before_group_invites_content' );
 
 				<div class="item">
 					<div class="item-title"><a href="<?php bp_group_permalink(); ?>"><?php bp_group_name(); ?></a></div>
-					<div class="item-meta"><i class="fa fa-clock-o bn-icon-time"></i><span class="activity"><?php printf( __( 'active %s', 'social-portal' ), bp_get_group_last_active() ); ?></span></div>
+					<div class="item-meta"><i class="fa fa-clock-o bn-icon-time"></i><span class="activity"><?php printf( __( 'Aktiv %s', 'social-portal' ), bp_get_group_last_active() ); ?></span></div>
 
 					<div class="item-desc"><?php bp_group_description_excerpt(); ?></div>
 
@@ -60,7 +60,7 @@ do_action( 'bp_before_group_invites_content' );
 <?php else: ?>
 
 	<div id="message" class="info">
-		<p><?php _e( 'You have no outstanding group invites.', 'social-portal' ); ?></p>
+		<p><?php _e( 'Du hast keine ausstehenden Gruppeneinladungen.', 'social-portal' ); ?></p>
 	</div>
 
 <?php endif;?>
