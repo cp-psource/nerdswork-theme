@@ -18,7 +18,8 @@ class CB_Cover_Image_Helper {
 	 */
 	private function setup() {
 		//for profile
-		add_filter( 'bp_before_xprofile_cover_image_settings_parse_args', array( $this,	'cover_settings_profile' ), 10, 1 );
+		//add_filter( 'bp_before_xprofile_cover_image_settings_parse_args', array( $this,	'cover_settings_profile' ), 10, 1 );
+		add_filter( 'bp_before_members_cover_image_settings_parse_args', array( $this,	'cover_settings_profile' ), 10, 1 );
 		//for groups
 		add_filter( 'bp_before_groups_cover_image_settings_parse_args', array( $this, 'cover_settings_group' ), 10, 1 );
 	}
