@@ -42,7 +42,7 @@ class CB_Admin_Helper {
 		
 		$url = $this->url;
 		//ich schau mir das mal an, vlt. hat es mit dem Footer-Problem zu tun
-		wp_register_script( 'cb-widgets-admin', $url . '/admin/assets/js/admin-widgets.js', false, cb_get_version(), true );///load in footer
+		//wp_register_script( 'cb-widgets-admin', $url . '/admin/assets/js/admin-widgets.js', false, cb_get_version(), true );///load in footer
 		//ansonst obere Zeile ausdokumentieren
 		if ( $this->load_admin_assets( $hook ) ) {
 			wp_enqueue_script( 'cb-widgets-admin' );
@@ -62,7 +62,7 @@ class CB_Admin_Helper {
 		if ( $this->load_admin_assets( $hook ) ) {
 			
 			wp_enqueue_style('font-awesome');
-			wp_enqueue_style( 'cb-widgets-admin', $url . '/admin/assets/css/admin-widgets.css' );
+			//wp_enqueue_style( 'cb-widgets-admin', $url . '/admin/assets/css/admin-widgets.css' );
 		
 		}
 		
