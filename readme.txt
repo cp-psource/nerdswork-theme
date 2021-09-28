@@ -38,6 +38,10 @@ Dieses Theme sorgt dabei für ein awesome Look&Feel für Deine Benutzer.
 
 == ChangeLog ==
 
+= 1.4.9 = DerN3rd =
+
+* CSS Fix Fluid Max-Width 1240px => 1880px
+
 = 1.4.8 = DerN3rd =
 
 * Release WMS N@W Netzwerksuche
